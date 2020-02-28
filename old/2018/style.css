@@ -1,0 +1,522 @@
+body {
+  font-family: 'M PLUS 1p', sans-serif;
+  margin: 0;
+}
+
+button{
+  background-color: transparent;
+  font: normal normal 12px/150% 'M PLUS 1p',sans-serif;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+
+/* ----
+
+ヘッダー
+
+----- */
+header {
+  background-color: #18180D;
+  color: #C3B59C;
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0px 2px 5px 0px gray;
+}
+
+header .top-banner {
+  color: #C3B59C;
+  text-align: center;
+}
+
+header .top-banner h1 {
+  font-size: 400%;
+  font-weight: normal;
+  line-height: 50vh;
+  letter-spacing: 10px;
+  padding-top: 50px;
+}
+
+header .top-banner span {
+  color: #C4593E;
+}
+
+header .scroll {
+  width: 100%;
+  padding-top: 50px;
+  text-align: center;
+}
+
+header .scroll a {
+  color: #C4593E;
+  text-decoration: none;
+}
+
+/* ----
+
+ナビゲーションバー
+
+----- */
+.inner {
+    width: 980px;
+    margin: 0 auto;
+}
+.inner:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* header */
+#top-head {
+    top: -20px;
+    position: absolute;
+    width: 100%;
+    margin: 0px auto 0;
+    padding: 30px 0 0;
+    background-color: #18180D;
+    line-height: 1;
+    z-index: 999;
+}
+#top-head a,
+#top-head {
+    color: #C3B59C;
+    text-decoration: none;
+}
+#top-head .inner {
+    position: relative;
+}
+#top-head .logo {
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+}
+#global-nav ul {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 12px;
+    font-weight: normal;
+}
+#global-nav ul li {
+    float: left;
+}
+#global-nav ul li a {
+    padding: 30px 30px;
+}
+
+#global-nav a:hover {
+  color: #C4593E;
+}
+
+/* Fixed */
+#top-head.fixed {
+    margin-top: 0;
+    top: 0;
+    position: fixed;
+    padding-top: 1px;
+    height: 30px;
+    background: #fff;
+    background: rgba(255,255,255,.7);
+    transition: top 0.65s ease-in;
+    -webkit-transition: top 0.65s ease-in;
+    -moz-transition: top 0.65s ease-in;
+}
+#top-head.fixed .logo {
+    font-size: 14px;
+    color: #333;
+}
+#top-head.fixed #global-nav ul li a {
+    color: #333;
+    padding: 0 20px;
+}
+
+#top-head.fixed #global-nav a:hover {
+  color: #C4593E;
+}
+
+/* Toggle Button */
+#nav-toggle {
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    width: 34px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 101;
+}
+#nav-toggle div {
+    position: relative;
+}
+#nav-toggle span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #666;
+    left: 0;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+}
+#nav-toggle span:nth-child(1) {
+    top: 0;
+}
+#nav-toggle span:nth-child(2) {
+    top: 8px;
+}
+#nav-toggle span:nth-child(3) {
+    top: 16px;
+}
+
+@media screen and (max-width: 640px) {
+    #top-head,
+    .inner {
+        width: 100%;
+        padding: 0;
+    }
+    #top-head {
+        top: 0;
+        position: fixed;
+        margin-top: 0;
+    }
+    /* Fixed reset */
+    #top-head.fixed {
+        padding-top: 0;
+        background: transparent;
+    }
+    #mobile-head {
+        background: #18180D;
+        width: 100%;
+        height: 45px;
+        z-index: 999;
+        position: relative;
+    }
+    #top-head.fixed .logo,
+    #top-head .logo {
+        position: absolute;
+        left: 13px;
+        top: 8px;
+        color: #C3B59C;
+        font-size: 12px;
+    }
+    #global-nav {
+        position: absolute;
+        /* 開いてないときは画面外に配置 */
+        top: -500px;
+        background: #333;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+    }
+    #global-nav ul {
+        list-style: none;
+        position: static;
+        right: 0;
+        bottom: 0;
+        font-size: 14px;
+    }
+    #global-nav ul li {
+        float: none;
+        position: static;
+    }
+    #top-head #global-nav ul li a,
+    #top-head.fixed #global-nav ul li a {
+        width: 100%;
+        display: block;
+        color: #fff;
+        padding: 18px 0;
+    }
+    #nav-toggle {
+        display: block;
+    }
+    /* #nav-toggle 切り替えアニメーション */
+    .open #nav-toggle span:nth-child(1) {
+        top: 11px;
+        -webkit-transform: rotate(315deg);
+        -moz-transform: rotate(315deg);
+        transform: rotate(315deg);
+    }
+    .open #nav-toggle span:nth-child(2) {
+        width: 0;
+        left: 50%;
+    }
+    .open #nav-toggle span:nth-child(3) {
+        top: 11px;
+        -webkit-transform: rotate(-315deg);
+        -moz-transform: rotate(-315deg);
+        transform: rotate(-315deg);
+    }
+    /* #global-nav スライドアニメーション */
+    .open #global-nav {
+        /* #global-nav top + #mobile-head height */
+        -moz-transform: translateY(550px);
+        -webkit-transform: translateY(550px);
+        transform: translateY(550px);
+    }
+}
+
+
+/* ----
+
+作品
+
+----- */
+create {
+  overflow: hidden;
+  width: 100%;
+}
+
+#masonry {
+  width: 100%;
+  padding-top: 5px;
+  margin: 0 auto;
+}
+
+.item {
+  float: left;
+  margin-bottom: -6px;
+  width: 33.333%;
+}
+
+.item img {
+  width: 100%;
+  position: relative;
+}
+
+@media screen and (max-width: 640px) {
+  .item {
+    width: 100%;
+  }
+  .item img {
+    width: 100%;
+  }
+}
+
+#onImage {
+  background-color: #C3B59C;
+  font-size: 80%;
+  margin: 5px;
+  padding: 5px 10px;
+  filter:alpha(opacity=80);
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* ----
+
+ポップアップ
+
+----- */
+.popup-modal img {
+}
+
+.inline-wrap {
+    position: relative;
+    margin:10px auto;
+    max-width: 95%;
+    background: #fff;
+    padding: 20px;
+    text-align:center;
+    font-size: 90%;
+}
+.inline-wrap h1 {
+    font-size: 120%;
+}
+
+.inline-wrap a {
+  color: #000;
+  text-decoration: none;
+}
+
+.inline-wrap a:hover {
+  color: #C4593E;
+}
+
+.inline-wrap .image img {
+  max-width: 75vw;
+  max-height: 75vh;
+  height:auto;
+}
+
+.popup-modal-dismiss {
+  background-color: #B1B88C;
+  color: #000;
+  width: 50px;
+  margin: 0 auto;
+  padding: 5px 10px;
+  filter:alpha(opacity=80);
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+/* ----
+
+プロフィール
+
+----- */
+#about {
+  background-color: #18180D;
+  color: #C3B59C;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 2;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+#about a {
+  color: #C4593E;
+  text-decoration: none;
+}
+
+.profile {
+  width: 70%;
+  margin: auto;
+  float: none;
+}
+
+.profile h2 {
+  margin-top: 50px;
+}
+
+.profile p {
+  margin-top: 25px;
+}
+
+.profile dt {
+  float: left;
+  clear: left;
+  color: #B1B88C;
+  width: 50px;
+  padding: 10px 0;
+  padding-right: 3px;
+}
+
+.profile dd {
+  float: left;
+  padding: 10px 0;
+}
+
+.profile li {
+  list-style: none;
+}
+
+@media screen and (max-width: 640px) {
+  .profile {  width: 90%;  }
+}
+
+
+
+/* ----
+
+問い合わせ
+
+----- */
+#contact {
+  background-color: #18180D;
+  color: #C3B59C;
+  margin-top: -5px;
+  width: 100%;
+}
+
+.account {
+  width: 100%;
+  text-align: center;
+  float: none;
+}
+
+.account img {
+  margin: 50vh 60px;
+  width: 30px;
+}
+
+.mailform {
+  float: none;
+}
+
+.sendmail {
+  display: block;
+}
+
+.sendmail div {
+  margin-bottom: 10px;
+}
+
+.sendmail label {
+  display: block;
+  float: left;
+  text-align: right;
+  width: 18vw;
+}
+
+.sendmail input {
+  font-size: 120%;
+  padding: 2px 10px;
+  width: 65vw;
+  border: solid 2px #B1B88C;
+  border-radius: 10px;
+}
+
+.sendmail textarea {
+  font-size: 120%;
+  height: 80px;
+  width: 65vw;
+  padding: 2px 10px;
+  border: solid 2px #B1B88C;
+  border-radius: 10px;
+}
+
+.sendbutton button {
+  font-size: 90%;
+  background-color: #B1B88C;
+  color: #000;
+  margin: 2px auto;
+  padding: 10px 20px;
+  filter:alpha(opacity=80);
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .account img {
+    margin: 50vh 20px;
+    width: 25px;
+   }
+
+   .sendmail label {
+     width: 40vw;
+     text-align: center;
+   }
+}
+
+
+/* ----
+
+フッター
+
+----- */
+footer {
+  background-color: #18180D;
+  color: #ADA06B;
+  width: 100%;
+  font-size: 80%;
+  margin-top: -5px;
+  text-align: center;
+}
