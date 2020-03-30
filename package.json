@@ -4,8 +4,8 @@
   "description": "My Portfolio Site",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass src/assets/scss/style.scss -o dist/assets/css/style.css --output-style compressed",
-    "watch:scss": "watch 'npm run scss' ./src/assets/sass",
+    "scss": "node-sass src/ -o dist/ --output-style compressed",
+    "watch:scss": "watch 'npm run scss' src/",
     "server": "browser-sync start --server dist --files='./dist/*'",
     "watch:server": "browser-sync start --server dist --files='./dist/*'",
     "imgmin": "node imagemin.js",
@@ -14,7 +14,7 @@
     "watch:html": "watch 'npm run html-cpx' ./src/**/*.html",
     "js-cpx": "cpx 'src/js/*.js' 'dist/'",
     "watch:js": "watch 'npm run js-cpx' ./src/js/*.js",
-    "dev": "npm run-all -p watch:*"
+    "dev": "run-p watch:*"
   },
   "repository": {
     "type": "git",
