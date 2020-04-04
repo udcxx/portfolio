@@ -5,15 +5,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass src/ -o dist/ --output-style compressed",
-    "watch:scss": "watch 'npm run scss' src/",
+    "watch:scss": "onchange 'src/**/*.scss' -- npm run scss",
     "server": "browser-sync start --server dist --files='./dist/*'",
     "watch:server": "browser-sync start --server dist --files='./dist/*'",
     "imgmin": "node imagemin.js",
-    "watch:images": "onchange \"src/assets/img\" -- npm run imgmin",
-    "html-cpx": "cpx 'src/**/*.html' 'dist/'",
-    "watch:html": "watch 'npm run html-cpx' ./src/**/*.html",
-    "js-cpx": "cpx 'src/js/*.js' 'dist/'",
-    "watch:js": "watch 'npm run js-cpx' ./src/js/*.js",
+    "watch:images": "onchange 'src/**/*.(jpg|png|gif|svg)' -- npm run imgmin",
+    "cpx-html": "cpx 'src/**/*.html' 'dist/'",
+    "watch:cpx-html": "onchange 'src/**/*.html' -- npm run cpx-html",
+    "cpx-js": "cpx 'src/**/*.js' 'dist/'",
+    "watch:cpx-js": "onchange 'src/**/*.js' -- npm run cpx-js",
     "dev": "run-p watch:*"
   },
   "repository": {

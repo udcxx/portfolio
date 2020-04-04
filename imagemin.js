@@ -4,7 +4,7 @@ const imageminPngquant = require('imagemin-pngquant');
 const imageminGifsicle = require('imagemin-gifsicle');
 const imageminSvgo = require('imagemin-svgo');
 
-imagemin(['src/assets/img/**/*.{jpg,png,gif,svg}'], {
+imagemin(['src/**/*.{jpg,png,gif,svg}'], {
     plugins: [
         imageminMozjpeg({ quality: 80 }),
         imageminPngquant({ quality: '65-80' }),
@@ -12,7 +12,7 @@ imagemin(['src/assets/img/**/*.{jpg,png,gif,svg}'], {
         imageminSvgo()
     ],
     replaceOutputDir: output => {
-        return output.replace(/img\//, '../../dist/assets/img/')
+        return output.replace('src/', 'dist/')
     }
 }).then(() => {
     console.log('Images optimized');
