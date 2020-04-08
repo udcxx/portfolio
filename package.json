@@ -14,7 +14,9 @@
     "watch:cpx-html": "onchange 'src/**/*.html' -- npm run cpx-html",
     "cpx-js": "cpx 'src/**/*.js' 'dist/'",
     "watch:cpx-js": "onchange 'src/**/*.js' -- npm run cpx-js",
-    "dev": "run-p watch:*"
+    "dev": "run-p watch:*",
+    "deploy": "node git-ftp.js",
+    "prepush": "npm run deploy"
   },
   "repository": {
     "type": "git",
