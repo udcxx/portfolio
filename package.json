@@ -15,8 +15,12 @@
     "cpx-js": "cpx 'src/**/*.js' 'dist/'",
     "watch:cpx-js": "onchange 'src/**/*.js' -- npm run cpx-js",
     "dev": "run-p watch:*",
-    "deploy": "node git-ftp.js",
-    "pre-push": "npm run deploy"
+    "deploy": "node git-ftp.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run deploy"
+    }
   },
   "repository": {
     "type": "git",
