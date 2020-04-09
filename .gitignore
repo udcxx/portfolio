@@ -55,7 +55,3 @@ package-lock.json
 
 # Dreamweaverのゴミファイル
 */_notes/*
-
-## My Custom Settings ##
-# dist Directry
-/dist/
