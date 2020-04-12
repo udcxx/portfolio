@@ -53,5 +53,5 @@ node_modules
 bower_components
 package-lock.json
 
-#Dreamweaverのゴミファイル
+# Dreamweaverのゴミファイル
 */_notes/*
