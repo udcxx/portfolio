@@ -11,6 +11,7 @@ body {
     width: 100%;
     margin: 0;
     font-size: 1.5rem;
+    line-height: 1.2em;
     color: #072774;
 }
 main {
@@ -23,3 +24,15 @@ section {
 p {
     font-size: 1.5rem;
 }
+
+#fv {
+    .txt {
+        width: 0;
+        margin: 40vh auto;
+        text-align: center;
+        position: relative;
+    }
+    .txt-ani {
+	    position: absolute;
+    }
+} // fv
