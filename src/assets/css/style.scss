@@ -1,30 +1,126 @@
 @import "_reset";
 
+// ------------------------------
+//    VERS
 //
-//  CORE
-// --------------------------------------------------
+$max-w: 1024px;
+$break:  720px;
+
+
+// ------------------------------
+//    FUNCTIONS
+//
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+}
+@function calcSize ($px, $device) {
+    $base-size: #{strip-unit($break)} !default;
+    @if $device == pc {
+        $base-size: #{strip-unit($max-w)};
+    }
+    @return calc(#{$px} / #{$base-size} * 100%);
+}
+
+
+
+// ------------------------------
+//    BASE
+//
 html {
     font-size: 10px; font-family: 'Noto Sans JP', sans-serif;
-    background-color: #E9EAEF;
+    background-color: #061E22;
+    @media (max-width: #{$break}) {
+        font-size: calc(10 / #{strip-unit($break)} * 100vw);
+    }
 }
 body {
     width: 100%;
     margin: 0;
     font-size: 1.5rem;
     line-height: 1.2em;
-    color: #072774;
+    color: #F7F7F7;
 }
 main {
-    width: 100%; max-width: 1024px;
+    width: 100%; max-width: $max-w;
     margin: 0 auto;
 }
 section {
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    width: 100%;
 }
 p {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    line-height: 1.8em;
+    letter-spacing: 0.2em;
 }
 
+
+
+// ------------------------------
+//    COMMON
+//
+a {
+    list-style: none;
+    color: #FAC883;
+    text-decoration: none;
+}
+a:hover {
+    color: #F69F26;
+    opacity: 0.7;
+}
+
+
+
+// ------------------------------
+//    HEADER
+//
+header {
+    width: 100%; height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: rgba(247, 247, 247, 0.7);
+    h1 {
+        font-size: 1.8rem;
+        line-height: 4rem;
+    }
+    ul {
+        display: flex;
+        li {
+            list-style: none;
+            & a {
+                color: #F7F7F7;
+                line-height: 4rem;
+            }
+            & a:hover {
+                color: #FAC883;
+            }
+            &::after {
+                content: "|";
+                margin: 0 0.25em;
+                line-height: 4rem;
+            }
+            &:last-child::after {
+                content: "";
+                margin: 0 0.5em 0 0;
+            }
+        }
+    }
+}
+
+
+
+// ------------------------------
+//    FV
+//
 #fv {
     .txt {
         width: 0;
@@ -36,3 +132,89 @@ p {
 	    position: absolute;
     }
 } // fv
+
+
+
+// ------------------------------
+//    ABOUT
+//
+#about {
+    .wrap {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        @media (max-width: #{$break}) {
+            flex-wrap: wrap;
+        }
+    }
+    .image {
+        width: 15.1rem;
+        margin-right: 5.0rem;
+        overflow: hidden;
+        position: relative;
+        @media (max-width: #{$break}) {
+            width: 15.1rem; height: 100%;
+            margin: 0 auto;
+        }
+        img {
+            border-radius: 50%;
+        }
+    }
+    .txt {
+        width: 71.3rem;
+        @media (max-width: #{$break}) {
+            width: 100%;
+            padding: 0 1em;
+        }
+    }
+} // about
+
+
+
+// ------------------------------
+//    HISTORY
+//
+
+
+
+// ------------------------------
+//    WORKS
+//
+#works {
+    .wrap {
+        width: 100%; height: 100%;
+    }
+    .list-wrap {
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        .list-content {
+            width: 24.25%;
+            margin-right: 0.5%;
+            opacity: 0.7;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .show {
+        width: calcSize(960, pc);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .image {
+            margin-left: 5%;
+            width: calcSize(400, pc);
+        }
+    }
+
+}
+
+
+
+// ------------------------------
+//    CONTACT
+//
