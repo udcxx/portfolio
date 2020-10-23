@@ -127,6 +127,7 @@ header {
         margin: 40vh auto;
         text-align: center;
         position: relative;
+        font-size: 6rem;
     }
     .txt-ani {
 	    position: absolute;
@@ -185,12 +186,14 @@ header {
         width: 100%; height: 100%;
     }
     .list-wrap {
-        width: 100%;
+        width: 100%; height: 23vh;
         display: flex;
+        align-items: center;
         overflow: hidden;
         .list-content {
             width: 24.25%;
             margin-right: 0.5%;
+            position: relative;
             opacity: 0.7;
             &:last-child {
                 margin-right: 0;
@@ -198,17 +201,29 @@ header {
             &:hover {
                 opacity: 1;
             }
+            img {
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
         }
     }
     .show {
-        width: calcSize(960, pc);
+        width: calcSize(960, pc); height: 54vh;
         display: flex;
         justify-content: center;
         align-items: center;
         .image {
-            margin-left: 5%;
             width: calcSize(400, pc);
+            margin-right: 2%;
         }
+        .txt {
+            width: calcSize(490, pc);
+        }
+    }
+    #show_box {
+        opacity: 1;
+        transition: opacity 0.5s;
     }
 
 }
