@@ -1,5 +1,5 @@
 // FV Text Animation
-let animationSize = 100;
+let animationSize = 80;
 
 let styles; let i; let randomX; let randomY; let keyframes;
 

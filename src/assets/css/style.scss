@@ -89,6 +89,7 @@ header {
     font-weight: bold;
     background-color: rgba(247, 247, 247, 0.7);
     h1 {
+        margin-left: 0.5em;
         font-size: 1.8rem;
         line-height: 4rem;
     }
@@ -113,7 +114,58 @@ header {
                 margin: 0 0.5em 0 0;
             }
         }
+        @media (max-width: #{$break}) {
+            width: 100vw; height: 100vh;
+            padding: 5rem 0;
+            position: fixed;
+            top: 0; left: 0;
+            transform: translateX(105vw);
+		    transition: 2s ease-in-out;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            background-color: rgba(247, 247, 247, 0.7);
+            li {
+                width: 100%; height: 2em;
+                text-align: center;
+            }
+            li::after, li:last-child::after {
+                content: none;
+            }
+        }
     }
+    #nav-toggle, .nav-toggle-btn, .nav-toggle-btn span {
+        display: none;
+    }
+    @media (max-width: #{$break}) {
+        .nav-toggle-btn {
+            width: 2rem; height: auto;
+            margin-right: 0.5rem;
+            display: block;
+            position: fixed;
+            top: 1rem; right: 1rem; z-index: 5;
+        }
+        .nav-toggle-btn span, .nav-toggle-btn span::before, .nav-toggle-btn span::after {
+            content: "";
+            width: 2rem; height: 0.3rem;
+            display: block;
+            position: relative;
+            opacity: 1;
+            color: rgba(0, 0, 0, 0);
+            border-radius: 1rem;
+            background-color: #000;
+        } 
+        .nav-toggle-btn span::before {
+            top: -.65rem;
+        }
+        .nav-toggle-btn span::after {
+            bottom: .7rem;
+        }
+        #nav-toggle:checked ~ ul {
+            transform: translateX(0);
+        }
+
+    }
+
 }
 
 
@@ -149,7 +201,7 @@ header {
         }
     }
     .image {
-        width: 15.1rem;
+        width: calcSize(151, pc);;
         margin-right: 5.0rem;
         overflow: hidden;
         position: relative;
@@ -162,7 +214,7 @@ header {
         }
     }
     .txt {
-        width: 71.3rem;
+        width: calcSize(713, pc);;
         @media (max-width: #{$break}) {
             width: 100%;
             padding: 0 1em;
@@ -210,12 +262,16 @@ header {
     }
     .show {
         width: calcSize(960, pc); height: 54vh;
+        padding: 3% 0;
         display: flex;
         justify-content: center;
         align-items: center;
         .image {
-            width: calcSize(400, pc);
+            width: auto; height: 100%;
             margin-right: 2%;
+            img {
+                width: auto; height: 100%;
+            }
         }
         .txt {
             width: calcSize(490, pc);
