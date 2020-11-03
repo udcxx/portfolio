@@ -7,7 +7,7 @@ const imageminSvgo = require('imagemin-svgo');
 imagemin(['src/**/*.{jpg,png,gif,svg}'], {
     plugins: [
         imageminMozjpeg({ quality: 80 }),
-        imageminPngquant({ quality: '65-80' }),
+        imageminPngquant({ quality: [.8] }),
         imageminGifsicle(),
         imageminSvgo()
     ],
