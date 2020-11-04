@@ -1,6 +1,8 @@
 const { execSync } = require("child_process");
 
 execSync("npm run imgmin");
+execSync("git add .");
+execSync("git commit -m 'Image Files Optimized'");
 
 const BRANCH = execSync("git rev-parse --abbrev-ref HEAD")
     .toString()
