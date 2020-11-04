@@ -32,10 +32,23 @@ document.addEventListener("DOMContentLoaded", function () {
 	btns.forEach((btn) => {
 		btn.addEventListener('click', function() {
 			document.getElementById('show_box').style.opacity = 0;
+			const src = this.getAttribute('src');
+			const href = this.dataset.href;
 			const h4 = this.dataset.h4;
 			const h3 = this.dataset.h3;
 			const p = this.dataset.p;
 			window.setTimeout(function() {
+				if (href) {
+					document.getElementById('show_href').setAttribute('href', href);
+					if (document.getElementById('show_href').classList.contains('hide')) {
+						document.getElementById('show_href').classList.remove('hide');
+					}
+				} else {
+					if (!document.getElementById('show_href').classList.contains('hide')) {
+						document.getElementById('show_href').classList.add('hide');
+					}
+				}
+				document.getElementById('show_img').setAttribute('src', src);
 				document.getElementById('show_ttl_sub').textContent = h4;
 				document.getElementById('show_ttl').textContent = h3;
 				document.getElementById('show_txt').textContent = p;

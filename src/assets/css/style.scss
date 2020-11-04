@@ -289,7 +289,7 @@ header {
         align-items: center;
         overflow: hidden;
         .list-content {
-            width: 24.25%;
+            width: 24.25%; height: 23vh;
             margin-right: 0.5%;
             position: relative;
             opacity: 0.7;
@@ -302,8 +302,8 @@ header {
             }
             img {
                 position: absolute;
-                top: 50%; left: 50%;
-                transform: translateX(-50%) translateY(-50%);
+                top: 0; left: 50%;
+                transform: translateX(-50%) translateY(0);
             }
         }
     }
