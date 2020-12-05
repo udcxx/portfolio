@@ -3,7 +3,7 @@ let animationSize = 100;
 
 let styles; let i; let randomX; let randomY; let keyframes;
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 	let txts = document.getElementsByClassName('txt-ani');
 	if (document.styleSheets) {
 		styles = document.styleSheets[document.styleSheets.length - 1];
@@ -26,11 +26,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// side menu close
+document.addEventListener("DOMContentLoaded", () => {
+	const menues = document.querySelectorAll('header ul li');
+	const menuFlg = document.getElementById('nav-toggle');
+	menues.forEach((menu) => {
+		menu.addEventListener('click', () => {
+			if (menuFlg.checked) {
+				menuFlg.checked = false;
+			}
+		});
+	});
+});
+
+
+
 // Works
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 	const btns = document.querySelectorAll('.list-content img');
 	btns.forEach((btn) => {
-		btn.addEventListener('click', function() {
+		btn.addEventListener('click', () => {
 			document.getElementById('show_box').style.opacity = 0;
 			const src = this.getAttribute('src');
 			const href = this.dataset.href;
@@ -60,3 +75,51 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
+
+
+
+// Smooth scroll
+const paginations = document.querySelectorAll("a.smooth");
+paginations.forEach(pagination => {
+	pagination.addEventListener("click", e => {
+		e.preventDefault();
+		const targetId = e.target.hash;
+		const target = document.querySelector(targetId);
+		target.scrollIntoView({ behavior: "smooth" });
+	});
+});
+
+
+
+
+// Intersection Observer
+const sections = document.querySelectorAll("section");
+const observerRoot = document.querySelector("main");
+const options = {
+	root: observerRoot,
+	rootMargin: "-50% 0px",
+	threshold: 0
+};
+const observer = new IntersectionObserver(doWhenIntersect, options);
+sections.forEach(section => {
+	observer.observe(section);
+});
+
+function doWhenIntersect(entries) {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			activatePagination(entry.target);
+		}
+	});
+}
+
+function activatePagination(element) {
+	const currentActiveIndex = document.querySelector("header li a.active");
+	if (currentActiveIndex !== null) {
+		currentActiveIndex.classList.remove("active");
+	}
+	const newActiveIndex = document.querySelector(`a[href='#${element.getAttribute("id")}']`);
+	if (newActiveIndex !== null) {
+		newActiveIndex.classList.add("active");
+	}
+}
