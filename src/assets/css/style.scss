@@ -168,7 +168,7 @@ header {
             color: rgba(0, 0, 0, 0);
             border-radius: 1rem;
             background-color: #000;
-        } 
+        }
         .nav-toggle-btn span::before {
             top: -.65rem;
         }
@@ -189,6 +189,7 @@ header {
 //    FV
 //
 #fv {
+    overflow-x: hidden;
     .txt {
         width: 0;
         margin: 40vh auto;
@@ -198,8 +199,33 @@ header {
     }
     .txt-ani {
 	    position: absolute;
+        z-index: 2;
+        text-align: center;
+    }
+    .txt-ani:before {
+        content: "";
+        width: 3rem; height: 3rem;
+        margin: 0 auto;
+        position: absolute;
+        top: 40%; left: 0; right: 0; z-index: -1;
+        animation: ring 3s infinite;
+        background-color: rgba(246, 159, 38, 0.8);
+        border-radius: 6rem;
     }
 } // fv
+
+@keyframes ring {
+    0% {
+        background-color: rgba(246, 159, 38, 0.8);
+        border-radius: 6rem;
+    }
+    70% {
+        transform: scale(4, 4);
+    }
+    100% {
+        background-color: rgba(246, 159, 38, 0);
+    }
+}
 
 
 
@@ -329,7 +355,7 @@ header {
         justify-content: center;
         align-items: center;
         @media (max-width: #{$break}) {
-           flex-wrap: wrap; 
+           flex-wrap: wrap;
         }
         .image {
             width: auto; height: 100%;
