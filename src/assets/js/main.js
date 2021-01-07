@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			styles.insertRule(keyframes, styles.cssRules.length);
 
 			txts[i].style.left = i - txts.length / 2 + "em";
-			txts[i].style.animation = "move" + i + " 1.5s 5s both";
+			txts[i].style.animation = "move" + i + " ease 1.5s 6s both";
 		}
 	}
 });
@@ -45,13 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
 	const btns = document.querySelectorAll('.list-content img');
 	btns.forEach((btn) => {
-		btn.addEventListener('click', () => {
+		btn.addEventListener('click', (e) => {
 			document.getElementById('show_box').style.opacity = 0;
-			const src = this.getAttribute('src');
-			const href = this.dataset.href;
-			const h4 = this.dataset.h4;
-			const h3 = this.dataset.h3;
-			const p = this.dataset.p;
+			console.log(e.target);
+			const src = e.target.getAttribute('src');
+			const href = e.target.dataset.href;
+			const h4 = e.target.dataset.h4;
+			const h3 = e.target.dataset.h3;
+			const p = e.target.dataset.p;
 			window.setTimeout(function() {
 				if (href) {
 					document.getElementById('show_href').setAttribute('href', href);
