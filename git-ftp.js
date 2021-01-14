@@ -14,4 +14,4 @@ if (BRANCH === "master") {
     cmd_ftp =
         "git ftp push -s dev";
 }
-// execSync(cmd_ftp);
+execSync(cmd_ftp);
