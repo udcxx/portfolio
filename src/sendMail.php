@@ -12,18 +12,52 @@
 
       <?php
 
-        $from = $_POST['user_mail'];
-        $name = $_POST['user_name'];
-        $msg = $_POST['user_message'];
+        require './recaptcha_vars.php';
 
-        mb_language("japanese");
-        mb_internal_encoding("UTF-8");
+        $siteKey = V2_SITEKEY;
+        $secretKey = V2_SECRETKEY;
 
-        $to = "me@udcxx.me";
-        $subject = "ポートフォリオから問い合わせ";
-        $body = "お名前＞＞".$name."\n\nE-mail＞＞".$from."\n \n内　容＞＞".$msg;
-        $from = "send-only@udcxx.me";
-        mb_send_mail($to,$subject,$body,"From:".$from);
+        $result_status = '';
+
+        if ( isset( $_POST[ 'g-recaptcha-response' ] ) ) {
+
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = array(
+            'secret' => $secretKey,
+            'response' =>  $_POST[ 'g-recaptcha-response' ]
+        );
+
+        $context = array(
+            'http' => array(
+                'method'  => 'POST',
+                'header'  => implode("\r\n", array('Content-Type: application/x-www-form-urlencoded',)),
+                'content' => http_build_query($data)
+            )
+        );
+
+        $api_response = file_get_contents($url, false, stream_context_create($context));
+
+        $result = json_decode( $api_response );
+        if ( $result->success ) {
+          $result_status = '成功';
+          // トークンが有効 -> メール送信
+          $from = $_POST['user_mail'];
+          $name = $_POST['user_name'];
+          $msg = $_POST['user_message'];
+
+          mb_language("japanese");
+          mb_internal_encoding("UTF-8");
+
+          $to = "me@udcxx.me";
+          $subject = "ポートフォリオから問い合わせ";
+          $body = "お名前＞＞".$name."\n\nE-mail＞＞".$from."\n \n内　容＞＞".$msg;
+          $from = "send-only@udcxx.me";
+          mb_send_mail($to,$subject,$body,"From:".$from);
+        } else {
+          $result_status = '失敗： ';
+          $result_status .= $result->{'error-codes'}[ 0 ];
+        }
+      }
 
        ?>
 

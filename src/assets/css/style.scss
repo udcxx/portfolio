@@ -33,7 +33,7 @@ html {
     font-size: 10px; font-family: 'Noto Sans JP', sans-serif;
     background-color: #061E22;
     @media (max-width: #{$break}) {
-        font-size: calc(10 / #{strip-unit($break)} * 100vw);
+        font-size: calc(15 / #{strip-unit($break)} * 100vw);
     }
 }
 body {
@@ -175,7 +175,7 @@ header {
         .nav-toggle-btn span::after {
             bottom: .7rem;
         }
-        #nav-toggle:checked ~ ul {
+        #nav-toggle:checked ‾ ul {
             transform: translateX(0);
         }
 
@@ -188,6 +188,9 @@ header {
 // ------------------------------
 //    FV
 //
+section#fv {
+    max-width: none;
+}
 #fv {
     overflow-x: hidden;
     .txt {
@@ -367,7 +370,7 @@ header {
             img {
                 width: auto; height: 100%;
                 @media (max-width: #{$break}) {
-                    width: 50%; height: auto;
+                    width: 60%; height: auto;
                 }
             }
         }
@@ -389,6 +392,9 @@ header {
             .link {
                 margin: 1rem 0 0;
             }
+            @media (max-width: #{$break}) {
+                width: 80%;
+            }
         }
     }
     #show_box {
@@ -403,3 +409,113 @@ header {
 // ------------------------------
 //    CONTACT
 //
+#contact {
+    position: relative;
+    ul {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        li {
+            width: calc(50 / 750 * 100vw);
+            max-width: 50px; min-width: 29px;
+            cursor: pointer;
+        }
+        @media (max-width: #{$break}) {
+            width: 80%;
+        }
+    }
+    footer {
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        text-align: center;
+    }
+}
+
+
+
+// ------------------------------
+//    CONTACT FORM
+//
+#contactform {
+    width: 100vw; height: 100vh;
+    position: fixed;
+    top: 0; left: 0; z-index: 10;
+    .contactform-wrap {
+        width: 100vw; height: 100vh;
+        position: relative;
+        top: 0; left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        .contactform-inner {
+            width: 90%; max-width: 800px;
+            margin: 0 auto;
+            padding: 3%;
+            position: relative;
+            top: 50%; left: 0; right: 0; z-index: 110;
+            transform: translateY(-50%);
+            box-sizing: border-box;
+            background-color: #061E22;
+            h2 {
+                font-size: 3rem;
+                line-height: 2em;
+            }
+            form.sendmail {
+                padding: 3%;
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 1.5rem;
+                line-height: 1.5em;
+                label {
+                    width: 30%;
+                    margin: 2% 0;
+                    display: block;
+                    line-height: 1.5em;
+                    box-sizing: border-box;
+                }
+                input {
+                    width: 69%;
+                    margin: 2% 0;
+                    line-height: 1.5em;
+                    box-sizing: border-box;
+                }
+                textarea {
+                    width: 69%;
+                    margin: 2% 0;
+                    line-height: 1.5em;
+                    box-sizing: border-box;
+                }
+                .g-recaptcha {
+                    width: 100%;
+                    margin: 5% auto;
+                    display: flex; justify-content: center;
+                }
+                .contactform-btn-area {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    button {
+                        margin: 0 1%;
+                        padding: .3em 1em;
+                        display: inline-block;
+                        text-decoration: none;
+                        color: #2c535a;
+                        border: solid 2px #2c535a;
+                        border-radius: 3px;
+                        background: #fff;
+                        transition: .4s;
+                        line-height: 1.5em;
+                        font-size: 1.5rem;
+                    }
+                    button:disabled {
+                        color: #333;
+                        border: solid 2px #999;
+                        background: #999;
+                    }
+                }
+            }
+        }
+    }
+}
