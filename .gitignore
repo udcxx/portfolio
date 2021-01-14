@@ -36,6 +36,7 @@ ehthumbs.db
 
 # Folder config file
 Desktop.ini
+.DS_Store
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
@@ -53,5 +54,5 @@ node_modules
 bower_components
 package-lock.json
 
-# Dreamweaverのゴミファイル
-*/_notes/*
+# reCAPTCHA
+recaptcha_vars.php
