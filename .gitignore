@@ -50,9 +50,13 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Node.js
 node_modules
 bower_components
 package-lock.json
+
+# dist Folder
+dist/
 
 # reCAPTCHA
 recaptcha_vars.php
