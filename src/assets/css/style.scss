@@ -156,8 +156,9 @@ header {
             width: 2rem; height: auto;
             margin-right: 0.5rem;
             display: block;
-            position: fixed;
-            top: 1rem; right: 1rem; z-index: 5;
+            position: absolute;
+            top: 50%; right: 1rem; z-index: 5;
+            transform: translateY(-50%);
         }
         .nav-toggle-btn span, .nav-toggle-btn span::before, .nav-toggle-btn span::after {
             content: "";
@@ -170,15 +171,14 @@ header {
             background-color: #000;
         }
         .nav-toggle-btn span::before {
-            top: -.65rem;
+            top: -.75rem;
         }
         .nav-toggle-btn span::after {
-            bottom: .7rem;
+            bottom: 1.15rem;
         }
-        #nav-toggle:checked ‾ ul {
+        #nav-toggle:checked ~ ul {
             transform: translateX(0);
         }
-
     }
 
 }
