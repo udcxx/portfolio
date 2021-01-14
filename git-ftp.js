@@ -1,4 +1,4 @@
-const { execSync } = require("child_process");
+const execSync = require('child_process').execSync;
 
 execSync("npm run imgmin");
 execSync("git add .");
