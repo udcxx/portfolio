@@ -106,7 +106,6 @@ header {
     top: 0; left: 0;
     z-index: 4;
     display: flex;
-    opacity: 0.8;
     justify-content: space-between;
     font-weight: bold;
     background-color: #7C888B;
@@ -270,6 +269,9 @@ section#fv {
     }
     .txt {
         width: calcSize(713, pc);
+        p {
+            margin: 1em auto;
+        }
         @media (max-width: #{$break}) {
             width: 100%;
             padding: 0 1em;
