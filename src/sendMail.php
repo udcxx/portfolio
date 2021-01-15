@@ -4,7 +4,7 @@
     <meta http-equiv="refresh" content="3; URL=index.html"/>
     <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:300,400,900&amp;subset=japanese" rel="stylesheet">
     <meta charset="utf-8">
   </head>
@@ -61,9 +61,16 @@
 
        ?>
 
-       <h1>お問い合わせいただき、ありがとうございました！</h1>
-       <br />
-       <p>3秒後に <a href="https://udcxx.me/index.html">ポートフォリオサイト</a> へ戻ります。</p>
+       <main>
+           <section>
+               <div class="wrap">
+                   <h1 style="font-size: 3rem">お問い合わせいただき、ありがとうございました！</h1>
+                   <br />
+                   <p>3秒後に <a href="https://udcxx.me/index.html">ポートフォリオサイト</a> へ戻ります。</p>
+               </div>
+           </section>
+       </main>
+
 
   </body>
 </html>
