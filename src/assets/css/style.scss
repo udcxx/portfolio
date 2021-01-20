@@ -226,13 +226,13 @@ section#fv {
         transform-origin: center;
         animation: ring 3s infinite;
         background-color: rgba(246, 159, 38, 0);
-        border-radius: 6rem;
+        border-radius: 50%;
     }
 } // fv
 
 @keyframes ring {
     from, 0% {
-        border-radius: 6rem;
+        border-radius: 50%;
         transform: scale(0, 0);
     }
     5% {
