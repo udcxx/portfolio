@@ -202,7 +202,7 @@ section#fv {
     max-width: none;
 }
 #fv {
-    overflow-x: hidden;
+    overflow: hidden;
     .txt {
         width: 0;
         margin: 40vh auto;
@@ -211,32 +211,41 @@ section#fv {
         font-size: 6rem;
     }
     .txt-ani {
+        width: 1em; height: 1em;
 	    position: absolute;
         z-index: 2;
+        display: block;
         text-align: center;
     }
     .txt-ani:before {
         content: "";
-        width: 3rem; height: 3rem;
+        width: 12rem; height: 12rem;
         margin: 0 auto;
         position: absolute;
-        top: 40%; left: 0; right: 0; z-index: -1;
+        top: -70%; left: -50%; z-index: -1;
+        transform-origin: center;
         animation: ring 3s infinite;
-        background-color: rgba(246, 159, 38, 0.8);
+        background-color: rgba(246, 159, 38, 0);
         border-radius: 6rem;
     }
 } // fv
 
 @keyframes ring {
-    0% {
-        background-color: rgba(246, 159, 38, 0.8);
+    from, 0% {
         border-radius: 6rem;
+        transform: scale(0, 0);
+    }
+    5% {
+        background-color: rgba(246, 159, 38, 0.8);
     }
     70% {
-        transform: scale(4, 4);
+        transform: scale(1, 1);
     }
-    100% {
+    80% {
         background-color: rgba(246, 159, 38, 0);
+    }
+    95%, to {
+        transform: scale(0, 0);
     }
 }
 
@@ -290,14 +299,18 @@ section#fv {
     }
     ul {
         position: relative;
+        padding: 0 2.5em;
         &::after {
             content: "";
             width: 0.2rem;
             padding-top: 50%;
             position: absolute;
-            top: 3rem; left: -1.6rem;
+            top: 2em; left: 1.4em;
             background-image: url("../img/history-bg-line.png");
             background-position: left; background-repeat: repeat-y; background-size: 0.2rem 0.2rem;
+            @media (max-width: #{$break}) {
+                padding-top: 80%;
+            }
         }
     }
     li {
@@ -316,7 +329,8 @@ section#fv {
         line-height: 1.8em;
         letter-spacing: 0.2em;
         dt {
-            width: 5em;
+            width: 3em;
+            margin-right: 2em;
         }
         dd {
             p {
@@ -432,8 +446,8 @@ section#fv {
         align-items: center;
         list-style: none;
         li {
-            width: calc(50 / 750 * 100vw);
-            max-width: 50px; min-width: 29px;
+            width: calc(40 / 750 * 100vw);
+            max-width: 40px; min-width: 29px;
             cursor: pointer;
             a::after {
                 content: none;
