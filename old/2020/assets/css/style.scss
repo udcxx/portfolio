@@ -78,21 +78,10 @@ a {
     list-style: none;
     color: #FAC883;
     text-decoration: none;
-    position: relative;
 }
-a::after {
-    content: '';
-    width: 100%; height: 1px;
-    margin: 0 auto;
-    position: absolute;
-    bottom: -2%; left: 0; right: 0;
-    background-color: #FAC883;
-    transform: scale(0, 1);
-    transform-origin: left top;
-    transition: transform .3s;
-}
-a:hover::after {
-    transform: scale(1, 1);
+a:hover {
+    color: #F69F26;
+    opacity: 0.7;
 }
 
 
@@ -106,6 +95,7 @@ header {
     top: 0; left: 0;
     z-index: 4;
     display: flex;
+    opacity: 0.8;
     justify-content: space-between;
     font-weight: bold;
     background-color: #7C888B;
@@ -166,9 +156,8 @@ header {
             width: 2rem; height: auto;
             margin-right: 0.5rem;
             display: block;
-            position: absolute;
-            top: 50%; right: 1rem; z-index: 5;
-            transform: translateY(-50%);
+            position: fixed;
+            top: 1rem; right: 1rem; z-index: 5;
         }
         .nav-toggle-btn span, .nav-toggle-btn span::before, .nav-toggle-btn span::after {
             content: "";
@@ -181,14 +170,15 @@ header {
             background-color: #000;
         }
         .nav-toggle-btn span::before {
-            top: -.75rem;
+            top: -.65rem;
         }
         .nav-toggle-btn span::after {
-            bottom: 1.15rem;
+            bottom: .7rem;
         }
-        #nav-toggle:checked ~ ul {
+        #nav-toggle:checked ‾ ul {
             transform: translateX(0);
         }
+
     }
 
 }
@@ -202,7 +192,7 @@ section#fv {
     max-width: none;
 }
 #fv {
-    overflow: hidden;
+    overflow-x: hidden;
     .txt {
         width: 0;
         margin: 40vh auto;
@@ -211,41 +201,32 @@ section#fv {
         font-size: 6rem;
     }
     .txt-ani {
-        width: 1em; height: 1em;
 	    position: absolute;
         z-index: 2;
-        display: block;
         text-align: center;
     }
     .txt-ani:before {
         content: "";
-        width: 12rem; height: 12rem;
+        width: 3rem; height: 3rem;
         margin: 0 auto;
         position: absolute;
-        top: -70%; left: -50%; z-index: -1;
-        transform-origin: center;
+        top: 40%; left: 0; right: 0; z-index: -1;
         animation: ring 3s infinite;
-        background-color: rgba(246, 159, 38, 0);
-        border-radius: 50%;
+        background-color: rgba(246, 159, 38, 0.8);
+        border-radius: 6rem;
     }
 } // fv
 
 @keyframes ring {
-    from, 0% {
-        border-radius: 50%;
-        transform: scale(0, 0);
-    }
-    5% {
+    0% {
         background-color: rgba(246, 159, 38, 0.8);
+        border-radius: 6rem;
     }
     70% {
-        transform: scale(1, 1);
+        transform: scale(4, 4);
     }
-    80% {
+    100% {
         background-color: rgba(246, 159, 38, 0);
-    }
-    95%, to {
-        transform: scale(0, 0);
     }
 }
 
@@ -278,9 +259,6 @@ section#fv {
     }
     .txt {
         width: calcSize(713, pc);
-        p {
-            margin: 1em auto;
-        }
         @media (max-width: #{$break}) {
             width: 100%;
             padding: 0 1em;
@@ -299,18 +277,14 @@ section#fv {
     }
     ul {
         position: relative;
-        padding: 0 2.5em;
         &::after {
             content: "";
             width: 0.2rem;
             padding-top: 50%;
             position: absolute;
-            top: 2em; left: 1.4em;
+            top: 3rem; left: -1.6rem;
             background-image: url("../img/history-bg-line.png");
             background-position: left; background-repeat: repeat-y; background-size: 0.2rem 0.2rem;
-            @media (max-width: #{$break}) {
-                padding-top: 80%;
-            }
         }
     }
     li {
@@ -329,8 +303,7 @@ section#fv {
         line-height: 1.8em;
         letter-spacing: 0.2em;
         dt {
-            width: 3em;
-            margin-right: 2em;
+            width: 5em;
         }
         dd {
             p {
@@ -446,15 +419,9 @@ section#fv {
         align-items: center;
         list-style: none;
         li {
-            width: calc(40 / 750 * 100vw);
-            max-width: 40px; min-width: 29px;
+            width: calc(50 / 750 * 100vw);
+            max-width: 50px; min-width: 29px;
             cursor: pointer;
-            a::after {
-                content: none;
-            }
-            a:hover {
-                opacity: 0.7;
-            }
         }
         @media (max-width: #{$break}) {
             width: 80%;
