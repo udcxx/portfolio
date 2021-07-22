@@ -252,6 +252,22 @@ section#fv {
 
 
 // ------------------------------
+//    BLOGs
+//
+#blog {
+    .wrap {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        @media (max-width: #{$break}) {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+
+
+// ------------------------------
 //    ABOUT
 //
 #about {

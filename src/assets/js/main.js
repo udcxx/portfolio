@@ -41,6 +41,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+// Get Blog Article
+document.addEventListener("DOMContentLoaded", () => {
+	// const targetURL = 'https://blog.udcxx.me/summary.json';
+	const targetURL = '/assets/js/summary.json';
+
+	let request = new XMLHttpRequest();
+	request.open('GET', targetURL);
+	request.responseType = 'json';
+	request.send();
+
+	request.onload = function() {
+		const articleList = request.response['fileMap'];
+		const keyList = Object.keys(articleList);
+
+		const number = articleRandom(keyList.length);
+
+		console.log(articleList[keyList[number]]['title']);
+	}
+});
+
+// 乱数発生（1より大きく、記事数より少ない）
+function articleRandom(articleLength) {
+	let random = Math.round( Math.random() * 10000 ) + 1;
+	while (random > articleLength) {
+		random = Math.round( Math.random() * 10000 ) + 1;
+	}
+	return random;
+}
+
+
 // Works
 document.addEventListener("DOMContentLoaded", () => {
 	const btns = document.querySelectorAll('.list-content img');
