@@ -55,20 +55,38 @@ document.addEventListener("DOMContentLoaded", () => {
 		const articleList = request.response['fileMap'];
 		const keyList = Object.keys(articleList);
 
-		const number = articleRandom(keyList.length);
+		let randomNum = [];
+		for (var i = 0; i < keyList.length; i++) {
+			let num = Math.round( Math.random() * 10000 ) + 1;
+			while (num > keyList.length || randomNum.includes(num)) {
+				num = Math.round( Math.random() * 10000 ) + 1;
+			}
+			randomNum.push(num);
+		}
+		const getTitle = (n) => {
+			return articleList[keyList[randomNum[n]]]['title'];
+		}
+		const getImage = (n) => {
+			return 'https://blog.udcxx.me/images/' + articleList[keyList[randomNum[n]]]['eyecatch'];
+		}
+		const getUrl = (n) => {
+			let url = articleList[keyList[randomNum[n]]]['base'];
+			url = 'https://blog.udcxx.me/article/' + url.replace(/^(\d{6})-(.*)\.json$/, '$1/$2') + '/';
+			return url;
+		}
 
-		console.log(articleList[keyList[number]]['title']);
+		const blogNodes = document.querySelectorAll('#blog .item');
+		let nth = 0;
+		blogNodes.forEach((blogNode) => {
+			blogNode.querySelector('.item-link').setAttribute('href', getUrl(nth));
+			blogNode.querySelector('.item-image').setAttribute('src', getImage(nth));
+			blogNode.querySelector('.item-ttl').textContent = getTitle(nth);
+			nth++;
+		});
+
 	}
 });
 
-// 乱数発生（1より大きく、記事数より少ない）
-function articleRandom(articleLength) {
-	let random = Math.round( Math.random() * 10000 ) + 1;
-	while (random > articleLength) {
-		random = Math.round( Math.random() * 10000 ) + 1;
-	}
-	return random;
-}
 
 
 // Works
