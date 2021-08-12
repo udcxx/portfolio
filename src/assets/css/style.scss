@@ -203,30 +203,53 @@ section#fv {
 }
 #fv {
     overflow: hidden;
+    position: relative;
+    .skils {
+        width: 100%; height: 100%;
+        margin: 0 auto;
+        display: block;
+        position: absolute;
+        top: 0; left: 0; right: 0; z-index: 1;
+        .skils-content {
+            margin: 0 auto;
+            display: block;
+            position: relative;
+            top: 50%; left: 0; right: 0;
+            transform: translateY(-50%);
+            font-size: 10rem;
+            text-align: center;
+            letter-spacing: 0.2em;
+            opacity: 0.1;
+        }
+    }
     .txt {
-        width: 0;
+        width: 300rem;
         margin: 40vh auto;
         text-align: center;
         position: relative;
         font-size: 6rem;
-    }
-    .txt-ani {
-        width: 1em; height: 1em;
-	    position: absolute;
-        z-index: 2;
-        display: block;
-        text-align: center;
-    }
-    .txt-ani:before {
-        content: "";
-        width: 12rem; height: 12rem;
-        margin: 0 auto;
-        position: absolute;
-        top: -70%; left: -50%; z-index: -1;
-        transform-origin: center;
-        animation: ring 3s infinite;
-        background-color: rgba(246, 159, 38, 0);
-        border-radius: 50%;
+        line-height: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .txt-ani {
+            width: 1em; height: 1em;
+            position: relative;
+            z-index: 4;
+            display: block;
+            text-align: center;
+        }
+        .txt-ani:before {
+            content: "";
+            width: 12rem; height: 12rem;
+            margin: 0 auto;
+            position: absolute;
+            top: -50%; left: -50%; z-index: -1;
+            transform-origin: center;
+            animation: ring 3s infinite;
+            background-color: rgba(246, 159, 38, 0);
+            border-radius: 50%;
+        }
     }
 } // fv
 
@@ -262,6 +285,9 @@ section#fv {
         @media (max-width: #{$break}) {
             flex-wrap: wrap;
         }
+    }
+    ul {
+        list-style: none;
     }
 }
 

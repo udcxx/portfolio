@@ -1,28 +1,61 @@
 // FV Text Animation
-let animationSize = 100;
-
-let styles; let i; let randomX; let randomY; let keyframes;
+let skilsPosition = 0;
+let charPosition = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
-	let txts = document.getElementsByClassName('txt-ani');
-	if (document.styleSheets) {
-		styles = document.styleSheets[document.styleSheets.length - 1];
-	} else {
-		document.getElementsByTagName('HEAD').item(0).createElement('style');
-		styles = document.styleSheets[document.styleSheets.length - 1];
-	}
-	for (i in txts) {
-		if (i >= 0) {
-			randomX = Math.random() * animationSize - animationSize / 2;
-			randomY = Math.random() * animationSize - animationSize / 2;
-			keyframes = "@keyframes move" + i + " { from { transform: translate(0, 0) } to { transform: translate(" + randomX + "vw, " + randomY + "vh) } }";
-			styles.insertRule(keyframes, styles.cssRules.length);
+	loop(skilsPosition)
 
-			txts[i].style.left = i - txts.length / 2 + "em";
-			txts[i].style.animation = "move" + i + " ease 1.5s 6s both";
-		}
-	}
+	// skils.forEach((skil) => {
+	// 	dom.textContent = '';
+	// 	let position = 0;
+	// 	const getCharacter = (position) => {
+	// 		return skil.charAt(position);
+	// 	}
+	// 	for await (let i of skil.length) {
+	// 		this.setTimeout(() => {
+	// 			console.log(getCharacter(i));
+	// 			dom.textContent = dom.textContent + getCharacter(i);
+	// 		}, 3000);
+	// 		position ++;
+	// 	}
+	// 	if (count >= skils.length) {
+	// 		count = 0;
+	// 	} else {
+	// 		count++;
+	// 	}
+	// });
 });
+async function loop(n) {
+	const skils = ['javascript', 'HTML/CSS', 'GAS', 'Nuxt.js', 'Node.js', 'Git', 'Atom', 'Mac', 'Windows'];
+	const dom = document.querySelector('.skils-content');
+
+	const skil = skils[n];
+
+	if (charPosition === 0) {
+		dom.textContent = '';
+		await setSkil(skil.charAt(charPosition));
+		charPosition++;
+	} else if (charPosition < skil.length) {
+		await setSkil(skil.charAt(charPosition));
+		charPosition++;
+	} else {
+		charPosition = 0;
+		skilsPosition++;
+	}
+
+	await loop(skilsPosition)
+
+	// if (skilsPosition >= skils.length) {
+	// 	skilsPosition = 0;
+	// }
+}
+async function setSkil(char) {
+	const dom = document.querySelector('.skils-content');
+
+	setTimeout(() => {
+		dom.textContent = dom.textContent + char;
+	}, 3000)
+}
 
 
 
