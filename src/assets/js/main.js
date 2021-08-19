@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		blogNodes.forEach((blogNode) => {
 			blogNode.querySelector('.item-link').setAttribute('href', getUrl(nth));
 			blogNode.querySelector('.item-image').setAttribute('src', getImage(nth));
-			blogNode.querySelector('.item-ttl').textContent = getTitle(nth);
+			blogNode.querySelector('.item-ttl .blog-item-bg').textContent = getTitle(nth);
 			nth++;
 		});
 
