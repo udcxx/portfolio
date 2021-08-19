@@ -1,60 +1,41 @@
 // FV Text Animation
-let skilsPosition = 0;
-let charPosition = 0;
+const skils = ['javascript', 'HTML/CSS', 'GAS', 'Nuxt.js', 'Node.js', 'Git', 'Atom', 'Mac', 'Windows'];
+const skilBox = document.querySelector('.skils-content');
+let countOfSkils = 0;
+let countOfSkil = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
-	loop(skilsPosition)
-
-	// skils.forEach((skil) => {
-	// 	dom.textContent = '';
-	// 	let position = 0;
-	// 	const getCharacter = (position) => {
-	// 		return skil.charAt(position);
-	// 	}
-	// 	for await (let i of skil.length) {
-	// 		this.setTimeout(() => {
-	// 			console.log(getCharacter(i));
-	// 			dom.textContent = dom.textContent + getCharacter(i);
-	// 		}, 3000);
-	// 		position ++;
-	// 	}
-	// 	if (count >= skils.length) {
-	// 		count = 0;
-	// 	} else {
-	// 		count++;
-	// 	}
-	// });
+	let loop = window.setInterval(setSkil, 500);
 });
-async function loop(n) {
-	const skils = ['javascript', 'HTML/CSS', 'GAS', 'Nuxt.js', 'Node.js', 'Git', 'Atom', 'Mac', 'Windows'];
-	const dom = document.querySelector('.skils-content');
+function setSkil() {
+	if (countOfSkils >= skils.length) {
+		countOfSkils = 0;
+	}
+	let skil = skils[countOfSkils];
+	if (countOfSkil > skil.length) {
+		countOfSkils++;
+		countOfSkil = 0;
+		if (countOfSkils >= skils.length) {
+			countOfSkils = 0;
+		}
+	}
+	let skilWord = skil.charAt(countOfSkil);
 
-	const skil = skils[n];
-
-	if (charPosition === 0) {
-		dom.textContent = '';
-		await setSkil(skil.charAt(charPosition));
-		charPosition++;
-	} else if (charPosition < skil.length) {
-		await setSkil(skil.charAt(charPosition));
-		charPosition++;
-	} else {
-		charPosition = 0;
-		skilsPosition++;
+	if (countOfSkil === 0) {
+		skilBox.textContent = '#';
 	}
 
-	await loop(skilsPosition)
+	skilBox.textContent = skilBox.textContent + skilWord;
 
-	// if (skilsPosition >= skils.length) {
-	// 	skilsPosition = 0;
-	// }
-}
-async function setSkil(char) {
-	const dom = document.querySelector('.skils-content');
+	countOfSkil++;
 
-	setTimeout(() => {
-		dom.textContent = dom.textContent + char;
-	}, 3000)
+	if (countOfSkil > skil.length) {
+		countOfSkils++;
+		countOfSkil = 0;
+		if (countOfSkils > skils.length) {
+			countOfSkils = 0;
+		}
+	}
 }
 
 
