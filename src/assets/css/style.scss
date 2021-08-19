@@ -220,6 +220,10 @@ section#fv {
             text-align: center;
             letter-spacing: 0.2em;
             opacity: 0.1;
+            @media (max-width: #{$break}) {
+                font-size: 9.5rem;
+                letter-spacing: -0.03em;
+            }
         }
     }
     .txt {
@@ -295,6 +299,7 @@ section#fv {
             position: absolute;
             border-radius: 50%;
             overflow: hidden;
+            transition: box-shadow 0.5s;
             @media (max-width: #{$break}) {
                 width: 30rem; height: 30rem;
             }
@@ -321,6 +326,7 @@ section#fv {
         }
         li:nth-of-type(1) {
             top: 10%; left: 15%;
+            animation: fuwafuwa 10s infinite ease-in-out .8s alternate;
             @media (max-width: #{$break}) {
                 top: 10%; left: 7%;
             }
@@ -328,6 +334,7 @@ section#fv {
         li:nth-of-type(2) {
             width: 21rem; height: 21rem;
             top: 40%; left: 60%;
+            animation: fuwafuwa2 10.3s infinite ease-in-out .4s alternate;
             @media (max-width: #{$break}) {
                 top: 45%; left: 50%;
             }
@@ -335,13 +342,40 @@ section#fv {
         li:nth-of-type(3) {
             width: 21rem; height: 21rem;
             top: 60%; left: 35%;
+            animation: fuwafuwa 10.2s infinite ease-in-out .1s alternate;
             @media (max-width: #{$break}) {
                 top: 65%; left: 10%;
             }
         }
+        li:hover {
+            box-shadow: 0px 0px 15px -3px #FAC883;
+        }
         span.blog-item-bg {
             background-color: rgba(6, 30, 34, 0.5);
         }
+    }
+}
+
+@keyframes fuwafuwa {
+    0%, 50%, 100% {
+        transform:translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform:translate(0, -2%) rotate(-2deg);
+    }
+    50% {
+        transform:translate(0, 2%) rotate(2deg);
+    }
+}
+@keyframes fuwafuwa2 {
+    0%, 50%, 100% {
+        transform:translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform:translate(0, 2%) rotate(-2deg);
+    }
+    50% {
+        transform:translate(0, -2%) rotate(2deg);
     }
 }
 
@@ -399,7 +433,7 @@ section#fv {
         &::after {
             content: "";
             width: 0.2rem;
-            padding-top: 50%;
+            padding-top: 55%;
             position: absolute;
             top: 2em; left: 1.4em;
             background-image: url("../img/history-bg-line.png");

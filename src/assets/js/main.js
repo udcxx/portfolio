@@ -109,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	btns.forEach((btn) => {
 		btn.addEventListener('click', (e) => {
 			document.getElementById('show_box').style.opacity = 0;
-			console.log(e.target);
 			const src = e.target.getAttribute('src');
 			const href = e.target.dataset.href;
 			const h4 = e.target.dataset.h4;
