@@ -11,10 +11,12 @@
     <meta name="og:image" content="https://udcxx.me/assets/images/og.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creater" content="@udc_xx">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.min.css">
     <link rel="icon" href="./assets/img/favicon.ico">
-    <script defer src="./assets/js/main.js"></script>
+    <script defer src="./assets/js/main.js" defer></script>
     <script defer src="https://www.google.com/recaptcha/api.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28582210-5"></script>
@@ -32,43 +34,57 @@
         <input type="checkbox" id="nav-toggle">
         <label for="nav-toggle" class="nav-toggle-btn"><span>.</span></label>
         <ul>
-            <li><a class="smooth" href="#fv">TOP</a></li>
+            <li><a class="smooth active" href="#fv">TOP</a></li>
+            <li><a class="smooth" href="#about">About</a></li>
             <li><a class="smooth" href="#blog">BLOG</a></li>
             <li><a class="smooth" href="#works">Works</a></li>
             <li><a class="smooth" href="#history">History</a></li>
-            <li><a class="smooth" href="#about">About</a></li>
             <li><a class="smooth" href="#contact">Contact</a></li>
         </ul>
     </header>
 
     <main>
         <section id="fv" class="wrap">
-            <div class="skils">
-                <span class="skils-content"></span>
-            </div>
-            <div class="txt">
-                <span class="txt-ani">u</span><span class="txt-ani">d</span><span class="txt-ani">c</span><span class="txt-ani">x</span><span class="txt-ani">x</span>
+            <div class="wrap-768">
+                <div class="txt">
+                    udc<span class="txt-ani">x</span><span class="skils-content">x</span>
+                </div>
             </div>
         </section><!-- /fv -->
 
-        <section id="blog" class="wrap">
-            <ul class="items">
-                <li class="item">
+        <section id="about" class="wrap inviewtoggle">
+            <div class="txt">
+                <p>はじめまして😀<br>ポートフォリオサイトをご覧いただき、ありがとうございます🙏</p>
+                <p>昔から「作ること」や「改造すること」に楽しさやワクワクを感じる性格で、中学時代に始めたブログでも訳も分からぬままテンプレートをいじったりしていて、そこからWebに対する興味が強くなり、コーダーとして就職したり、<a href="https://blog.udcxx.me/" target="_blank">Nuxt.jsでブログをイチから構築</a>したり、GASやNode.jsで業務改善に取り組むなど、今に繋がっています🧭<br>フロントエンド一辺倒だった知識に幅をもたせられればと、とある製品のサポートを行う職に移りましたが、引き続きWebの知識もキャッチアップ出来ればと思っています💪</p>
+                <p>今後も自分自身にアップデートをかけ続けていきますので、ご縁があった際には、どうぞよろしくお願いいたします😄</p>
+            </div>
+        </section><!-- /about -->
+
+        <section id="blog">
+            <div class="wrap"></div>
+            <ul class="items wrap">
+                <li class="item inviewtoggle">
                     <a href="#" class="item-link" target="_blank">
-                        <img src="" alt="" class="item-image">
-                        <p class="item-ttl"><span class="blog-item-bg"></span></p>
+                        <div class="item-image-wrap">
+                            <img src="" alt="" class="item-image">
+                        </div>
+                        <p class="item-ttl"></p>
                     </a>
                 </li>
-                <li class="item">
+                <li class="item inviewtoggle">
                     <a href="#" class="item-link" target="_blank">
-                        <img src="" alt="" class="item-image">
-                        <p class="item-ttl"><span class="blog-item-bg"></span></p>
+                        <div class="item-image-wrap">
+                            <img src="" alt="" class="item-image">
+                        </div>
+                        <p class="item-ttl"></p>
                     </a>
                 </li>
-                <li class="item">
+                <li class="item inviewtoggle">
                     <a href="#" class="item-link" target="_blank">
-                        <img src="" alt="" class="item-image">
-                        <p class="item-ttl"><span class="blog-item-bg"></span></p>
+                        <div class="item-image-wrap">
+                            <img src="" alt="" class="item-image">
+                        </div>
+                        <p class="item-ttl"></p>
                     </a>
                 </li>
             </ul>
@@ -76,11 +92,13 @@
 
         <section id="works" class="wrap">
             <div class="wrap">
-                <div class="list-wrap">
-                    <div class="list-content"><img src="./assets/img/cr-fjuku.jpg" alt="F-juku様" data-href="http://fjuku.net/" data-h3="Webサイト制作" data-h4="F-juku 様" data-p="学習塾のWebサイト制作を行いました。"></div>
+                <div class="list-wrap inviewtoggle">
                     <div class="list-content"><img src="./assets/img/cr-maldive.jpg" alt="MalDive様" data-href="https://www.mal-dive.com/" data-h3="Webサイト制作" data-h4="Mal Dive 様" data-p="ダイビングショップのWebサイト制作をお手伝いさせていただきました。Wixを使用しています。"></div>
-                    <div class="list-content"><img src="./assets/img/cr-maedamisaki.jpg" alt="株式会社まえだ様" data-href="https://maedamisaki.jp/" data-h3="Webサイト制作" data-h4="株式会社まえだ 様（真栄田岬）" data-p="観光地のWebサイト制作に、コーディング面でのお手伝いをさせていただきました。Wordpressを使用しています。海況ページのJavascriptによる制御も担当しました。"></div>
+                    <div class="list-content"><img src="./assets/img/cr-maedamisaki.jpg" alt="株式会社まえだ様" data-href="https://maedamisaki.jp/" data-h3="Webサイト制作" data-h4="株式会社まえだ 様（真栄田岬）" data-p="観光地のWebサイト制作に、コーディング面でのお手伝いをさせていただきました。Wordpressを使用しています。海況ページのJavaScriptによる制御も担当しました。"></div>
                     <div class="list-content"><img src="./assets/img/cr-lab.jpg" alt="lab Okinawa" data-href="https://lab-okinawa.com/" data-h3="Webサイト制作" data-h4="株式会社 lab 様（lab okinawa）" data-p="多言語児童クラブとその運営会社様のWebサイト制作に、コーディング面でお手伝いをさせていただきました。Wordpressを利用しています。"></div>
+                    <div class="list-content"><img src="./assets/img/cr-aigo.jpg" alt="日本視覚障害者囲碁協会" data-href="https://aigo.tokyo/" data-h3="Webサイト制作" data-h4="日本視覚障害者囲碁協会様" data-p="日本視覚障害者囲碁協会様のWebサイト制作に、コーディング面でお手伝いさせていただきました。Wordpressを使用しています。"></div>
+                    <div class="list-content"><img src="./assets/img/cr-blog.jpg" alt="無趣味の戯言" data-href="https://blog.udcxx.me/" data-h3="ブログの作成" data-h4="無趣味の戯言" data-p="Nuxt.jsを利用してブログを制作し、Web系の技術的な記事を中心に更新しています。"></div>
+                    <div class="list-content"><img src="./assets/img/cr-store.jpg" alt="udcstore" data-href="https://udcxx.stores.jp/" data-h3="ネットショップ" data-h4="udcstore" data-p="STORESにて、kintoneのアプリやカスタマイズ用JavaScriptを中心に、すぐに活用できる商品を販売しています。"></div>
                 </div>
 
 
@@ -96,19 +114,13 @@
                     </div>
                 </div>
 
-                <div class="list-wrap">
-                    <div class="list-content"><img src="./assets/img/cr-blog.jpg" alt="無趣味の戯言" data-href="https://blog.udcxx.me/" data-h3="Nuxt.jsでのブログ作成" data-h4="無趣味の戯言" data-p="Nuxt.jsを利用してブログを制作し、主にテック系の記事を更新しています。"></div>
-                    <div class="list-content"><img src="./assets/img/cr-aigo.jpg" alt="日本視覚障害者囲碁協会" data-href="https://aigo.tokyo/" data-h3="Webサイト制作" data-h4="日本視覚障害者囲碁協会様" data-p="日本視覚障害者囲碁協会様のWebサイト制作に、コーディング面でお手伝いさせていただきました。Wordpressを使用しています。"></div>
-                    <div class="list-content"><img src="./assets/img/cr-tweetbot.jpg" alt="毎日自動で記事を投下するbotを作る" data-href="https://blog.udcxx.me/article/200317/gas-blog-tweet-1/" data-h3="記事Bot（ブログ記事自動ツイートツール）の制作" data-h4="ツール制作" data-p="毎日19時ごろに、僕のブログからランダムで選んだ記事をツイッターでシェアするBotを制作しました。GASとIFTTTを利用しています。"></div>
-                    <div class="list-content"><img src="./assets/img/cr-gitftp.jpg" alt="git ftpでアップロードを実行させる" data-href="https://blog.udcxx.me/article/200711/git-ftp/" data-h3="git ftpでFTPアップロードの自動化" data-h4="ツール制作" data-p="git ftpというプラグインを利用し、Node.jsでFTPのファイルアップロードを自動化しました。Node.js, git-ftpを使用しています。"></div>
-                </div>
             </div>
 
         </section><!-- /works -->
 
 
-        <section id="history">
-            <ul>
+        <section id="history" class="wrap">
+            <ul class="inviewtoggle">
                 <li>
                     <dl>
                         <dt>1996</dt>
@@ -119,7 +131,7 @@
                     <dl>
                         <dt>2010</dt>
                         <dd>
-                            FC2にてブログを開始
+                            ブログ開設
                             <p>HTML/CSSに触れるきっかけとなった</p>
                         </dd>
                     </dl>
@@ -127,10 +139,7 @@
                 <li>
                     <dl>
                         <dt>2014</dt>
-                        <dd>
-                            大学へ入学
-                            <p>情報系の学部で基礎的な知識を学んだ。<br>在学中は、学習塾にて講師・事務補助などのアルバイトも行った（4年間）<br>同時に、倉庫作業（3年）・洗車・試験監督なども経験</p>
-                        </dd>
+                        <dd>大学（情報系学部）へ入学</dd>
                     </dl>
                 </li>
                 <li>
@@ -142,46 +151,35 @@
                 <li>
                     <dl>
                         <dt>2019</dt>
-                        <dd>大手広告代理店のWebコーダーへ転職</dd>
+                        <dd>大手広告代理店のコーダーへ転職</dd>
                     </dl>
                 </li>
                 <li>
                     <dl>
                         <dt>2021</dt>
-                        <dd>ERPサポートエンジニアへ転職</dd>
+                        <dd>テクニカルサポートへ転職</dd>
                     </dl>
                 </li>
             </ul>
         </section><!-- /history -->
 
 
-        <section id="about" class="wrap">
-            <div class="wrap">
-                <div class="image">
-                    <img src="./assets/img/profile.png" alt="プロフィール画像">
-                </div>
-                <div class="txt">
-                    <p>はじめまして😀<br>ポートフォリオサイトをご覧いただき、ありがとうございます🙏</p>
-                    <p>昔から「作ること」や「改造すること」に楽しさやワクワクを感じる性格で、中学時代に始めたブログでも訳も分からぬままテンプレートをいじったりしていて、そこからWebに対する興味が強くなり、コーダーとして就職したり、<a href="https://blog.udcxx.me/" target="_blank">Nuxt.jsでブログをイチから構築</a>したり、GASやNode.jsで業務改善に取り組むなど、今に繋がっています🧭<br>フロントエンド一辺倒だった知識に幅をもたせられればと、ERPのサポートエンジニアへ転職しましたが、引き続きWebの知識もゆっくりキャッチアップ出来ればと思っています💪</p>
-                    <p>今後も自分自身にアップデートをかけ続けていきますので、ご縁があった際には、どうぞよろしくお願いいたします😄</p>
-                </div>
-            </div>
-        </section><!-- /about -->
+
 
 
         <section id="contact" class="wrap">
-            <ul>
-                <li><a href="https://twitter.com/udc_xx/"><img src="./assets/img/contact-twitter.png" alt="twitter - @udc_xx"></a></li>
+            <ul class="inviewtoggle">
+                <li><a href="https://twitter.com/udc_xx/"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4rem" height="4rem" viewBox="0 0 350 300"><path d="M350.001,35.509 C346.026,42.167 340.649,49.197 333.870,56.595 C328.493,62.513 321.944,68.556 314.231,74.720 C314.231,74.720 314.231,76.940 314.231,76.940 C314.231,76.940 314.231,79.530 314.231,79.530 C314.231,80.762 314.346,81.626 314.579,82.119 C314.579,82.119 314.579,84.708 314.579,84.708 C314.579,110.109 310.022,135.572 300.903,161.097 C291.785,186.620 278.809,209.494 261.975,229.715 C243.971,251.417 222.113,268.556 196.394,281.134 C170.674,293.711 141.917,299.999 110.122,299.999 C89.546,299.999 70.142,297.041 51.904,291.122 C33.201,285.202 15.899,276.818 -0.001,265.967 C0.936,266.214 2.337,266.338 4.208,266.338 C7.948,266.831 10.755,267.077 12.626,267.077 C12.626,267.077 17.183,267.077 17.183,267.077 C33.550,267.077 49.567,264.242 65.231,258.569 C79.727,253.144 93.403,245.253 106.263,234.895 C91.300,234.649 77.387,229.469 64.531,219.357 C51.904,209.494 43.486,197.040 39.279,181.997 C42.786,182.737 45.007,183.105 45.943,183.105 C45.943,183.105 49.447,183.105 49.447,183.105 C50.151,183.352 51.202,183.476 52.605,183.476 C54.708,183.476 56.346,183.352 57.516,183.105 C59.853,183.105 63.128,182.612 67.335,181.626 C67.801,181.626 68.505,181.502 69.439,181.256 C70.376,181.009 71.075,180.887 71.542,180.887 C54.941,177.434 41.265,168.679 30.509,154.622 C19.520,140.565 14.029,124.536 14.029,106.534 C14.029,106.534 14.029,106.163 14.029,106.163 C14.029,106.163 14.029,105.794 14.029,105.794 C14.029,105.794 14.029,105.424 14.029,105.424 C18.471,108.383 23.615,110.603 29.460,112.082 C35.538,114.054 41.265,115.042 46.644,115.042 C36.354,107.644 28.640,98.642 23.497,88.038 C17.651,77.187 14.729,65.102 14.729,51.786 C14.729,44.388 15.546,37.729 17.183,31.810 C18.120,27.617 20.457,21.576 24.198,13.685 C42.435,37.358 64.177,55.854 89.429,69.172 C115.382,83.475 142.969,91.366 172.195,92.847 C171.494,87.667 171.145,84.832 171.145,84.339 C170.674,80.886 170.441,78.051 170.441,75.830 C170.441,54.868 177.456,36.989 191.483,22.193 C205.512,7.396 222.462,-0.002 242.337,-0.002 C252.623,-0.002 262.325,2.094 271.444,6.286 C280.562,10.971 288.394,16.891 294.942,24.042 C302.423,22.315 310.372,19.850 318.788,16.644 C325.803,13.931 333.051,10.232 340.532,5.547 C337.729,14.424 333.634,22.439 328.260,29.591 C322.179,36.989 315.751,42.907 308.969,47.347 C315.984,46.113 322.999,44.634 330.010,42.907 C335.388,41.428 342.052,38.961 350.001,35.509 Z" class="fill_tw"></path></svg></a></li>
                 <li><a href="https://www.instagram.com/udcsk/"><img src="./assets/img/contact-instagram.png" alt="twitter - @udc_xx"></a></li>
                 <li><a href="https://github.com/udcxx"><img src="./assets/img/contact-github.png" alt="twitter - @udc_xx"></a></li>
                 <li><a href="https://blog.udcxx.me/"><img src="./assets/img/contact-blog.png" alt="twitter - @udc_xx"></a></li>
-                <li><a onclick="fadeIn('contactform')"><img src="./assets/img/contact-mail.png" alt="twitter - @udc_xx"></a></li>
+                <li><a onclick="fadeIn('#contactform')"><img src="./assets/img/contact-mail.png" alt="twitter - @udc_xx"></a></li>
             </ul>
-            <footer>&copy; 2018 - 2021 udcxx.me</footer>
+            <footer>&copy; 2018 - 2022 udcxx.me</footer>
         </section><!-- /links -->
 
 
-        <section id="contactform" style="display: none; opacity: 0;">
+        <section id="contactform" style="z-index: -10; opacity: 0;">
             <div class="contactform-wrap">
                 <div class="contactform-inner">
                     <h2>メールフォーム</h2>
@@ -198,7 +196,7 @@
 
                         <div class="contactform-btn-area">
                             <button type="submit" id="contactform-submit" class="button" onclick="fadeOut('contactform')">送信🚀</button>
-                            <button type="button" class="button" onclick="fadeOut('contactform')">閉じる</button>
+                            <button type="button" class="button" onclick="fadeOut('#contactform')">閉じる</button>
                         </div>
                     </form>
                 </div>
