@@ -10,6 +10,7 @@
 * **2019年版：** https://udcxx.github.io/portfolio/old/2019/
 * **2020年版：** https://udcxx.github.io/portfolio/old/2020/
 * **2021年版：** https://udcxx.github.io/portfolio/old/2021/
+* **2022年版：** https://udcxx.github.io/portfolio/old/2022/
 
 ## development
 
