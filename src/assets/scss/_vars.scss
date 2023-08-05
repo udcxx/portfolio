@@ -1,0 +1,49 @@
+//
+// ブレイクポイント
+//
+//   * break...SP表示を適用する最大の画面幅
+
+$break: 768px;
+
+
+
+//
+// 横幅
+//
+//   * wrap-max...最大の横幅（ヘッダー内の要素など）
+//   * wrap...通常の横幅
+//   * inner...コンテンツの横幅
+
+$wrap-max: 1440px;
+$wrap: 1000px;
+$inner: 800px;
+
+
+
+//
+// カラー
+//
+//   * color-base...文字色
+//   * color-title...h1～h6の文字色
+//   * color-accent...アクセント文字色
+//   * color-link...aタグの文字色
+//   * bg-color-base...背景色
+//   * bg-color-accent...アクセント背景色
+
+$color-base: #000;
+$color-title: #aaa;
+$color-accent: #ccc;
+$color-link: #019;
+$bg-color-base: #fff;
+$bg-color-accent: #fff;
+
+
+
+//
+// フォント 
+//
+//   * font-sans-serif...ゴシック体
+//   * font-serif...明朝体
+
+$font-sans-serif: 'sans-serif';
+$font-serif: 'sans';

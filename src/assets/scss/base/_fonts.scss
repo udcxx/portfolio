@@ -1,0 +1,79 @@
+@use "../vars" as *;
+
+//
+// root
+//
+
+html, body {
+    font-family: #{$font-sans-serif}, sans-serif;
+    font-size: 10px;
+    color: $color-base;
+
+    @media (max-width: $break) {
+        font-size: clamp(15px, calc(10px + 0.6vw), 10px);
+    }
+
+    @media (max-width: 320px) {
+        font-size: 10px;
+    }
+}
+
+
+
+//
+// 見出し
+//
+
+h1 {
+    font-size: 2.8rem; font-weight: 900;
+    color: $color-title;
+}
+
+h2 {
+    font-size: 2.2rem; font-weight: 700;
+    color: $color-title;
+}
+
+h3 {
+    font-size: 1.872rem; font-weight: 700;
+    color: $color-title;
+}
+
+h4 {
+    font-size: 1.5rem; font-weight: 700;
+    color: $color-title;
+}
+
+h5 {
+    font-size: 1.328rem; font-weight: 500;
+    color: $color-title;
+}
+
+h6 {
+    font-size: 1.072rem; font-weight: 500;
+    color: $color-title;
+}
+
+
+
+//
+// そのほか
+//
+
+p {
+    line-height: 1.8em;
+}
+
+a {
+    color: $color-link;
+}
+
+
+
+//
+// 明朝体
+//
+
+.serif {
+    font-family: #{$font-serif}, serif;
+}

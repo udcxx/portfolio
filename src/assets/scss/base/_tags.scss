@@ -1,0 +1,25 @@
+@use "../vars" as *;
+
+html, body {
+    width: 100vw;
+    margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
+    background-color: $bg-color-base;
+}
+
+a {
+    color: $color-link;
+    opacity: 1;
+    transition: opacity .7s;
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+p {
+    margin-bottom: 1em;
+    &.nomargin {
+        margin-bottom: 0;
+    }
+}

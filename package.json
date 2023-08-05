@@ -1,6 +1,6 @@
 {
   "name": "udcxx-portfolio",
-  "version": "23.0",
+  "version": "23.0.0",
   "description": "My Portfolio Site",
   "scripts": {
     "sass": "sass --no-source-map --style=compressed src/assets/scss:dist/assets/css",
