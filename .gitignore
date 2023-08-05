@@ -60,3 +60,6 @@ dist
 
 # reCAPTCHA
 recaptcha_vars.php
+
+# FTP Settings
+secret-infos.json
