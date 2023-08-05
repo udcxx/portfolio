@@ -15,8 +15,8 @@ $break: 768px;
 //   * inner...コンテンツの横幅
 
 $wrap-max: 1440px;
-$wrap: 1000px;
-$inner: 800px;
+$wrap: 1064px;
+$inner: 900px;
 
 
 
@@ -30,12 +30,12 @@ $inner: 800px;
 //   * bg-color-base...背景色
 //   * bg-color-accent...アクセント背景色
 
-$color-base: #000;
+$color-base: #F7F7F7;
 $color-title: #aaa;
-$color-accent: #ccc;
-$color-link: #019;
-$bg-color-base: #fff;
-$bg-color-accent: #fff;
+$color-accent: #fac883;
+$color-link: #fac883;
+$bg-color-base: #061e22;
+$bg-color-accent: #061e22;
 
 
 
@@ -45,5 +45,5 @@ $bg-color-accent: #fff;
 //   * font-sans-serif...ゴシック体
 //   * font-serif...明朝体
 
-$font-sans-serif: 'sans-serif';
-$font-serif: 'sans';
+$font-sans-serif: 'BIZ UDPGothic', 'sans-serif';
+$font-serif: 'BIZ UDPMincho', 'sans';

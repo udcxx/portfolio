@@ -1,4 +1,6 @@
 @use "../vars" as *;
+@use "../function" as *;
+@use "sass:math";
 
 //
 // root
@@ -10,7 +12,7 @@ html, body {
     color: $color-base;
 
     @media (max-width: $break) {
-        font-size: clamp(15px, calc(10px + 0.6vw), 10px);
+        font-size: calc(10 / #{$break} * 100vw);
     }
 
     @media (max-width: 320px) {
@@ -30,7 +32,9 @@ h1 {
 }
 
 h2 {
-    font-size: 2.2rem; font-weight: 700;
+    @include fontsize(80); 
+    font-weight: 700;
+    line-height: 0.8em;
     color: $color-title;
 }
 

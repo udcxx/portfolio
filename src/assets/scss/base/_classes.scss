@@ -11,11 +11,38 @@
     &.-max {
         max-width: $wrap-max;
     }
+
+
 }
 
 .inner {
     width: calc(#{math.div($inner, $wrap) * 100vw}); max-width: $inner;
+    height: 100vh;
     margin: 0 auto;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $break) {
+        flex-wrap: wrap;
+    }
+
+    &--left {
+        width: 75%;
+
+        @media (max-width: $break) {
+            width: 100%;
+        }
+    }
+
+    &--right {
+        width: 25%;
+
+        @media (max-width: $break) {
+            width: 100%;
+        }
+    }
 }
 
 .flex {

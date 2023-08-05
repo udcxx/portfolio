@@ -1,11 +1,31 @@
 @use "../vars" as *;
+@use "../function" as *;
 
 html, body {
     width: 100vw;
     margin: 0 auto;
     position: relative;
     overflow-x: hidden;
+    opacity: 0;
+    animation: bodyfadein 0.8s 0.5s forwards;
     background-color: $bg-color-base;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden; overflow-x: hidden;
+    // background: linear-gradient(-45deg, #8BC6EC, #061E22);
+    background-color: #061e22;
+    background-image: linear-gradient(62deg, #061e22 10%, #1b3c41 50%, #8bc6ec 100%);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+section {
+    margin: 0 auto;
+    display: block;
+    position: relative;
 }
 
 a {
@@ -14,11 +34,16 @@ a {
     transition: opacity .7s;
     &:hover {
         opacity: 0.7;
+        color: $color-accent;
     }
 }
 
 p {
     margin-bottom: 1em;
+    @include fontsize(16);
+    font-weight: 400;
+    line-height: 1.8em;
+    letter-spacing: 0.2em;
     &.nomargin {
         margin-bottom: 0;
     }
