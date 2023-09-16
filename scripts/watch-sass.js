@@ -5,11 +5,12 @@ const glob = require('glob');
 const regexp  = /\.scss$/;
 const sassDir = 'src/assets/scss/';
 let sassFiles = '';
+sassFiles += `@use "base/_reset.scss";\n`;
 
-const files = glob.sync(`${sassDir}**/*.scss`);
+const files = glob.sync(`${sassDir}**/_*.scss`);
 
 for (const file of files) {
-    if (regexp.test(file) && file != `${sassDir}style.scss`) {
+    if (regexp.test(file) && file != `${sassDir}style.scss` && file != `${sassDir}base/_reset.scss`) {
         sassFiles += `@use "${file.replace(sassDir, '')}";\n`;
     }
 }
