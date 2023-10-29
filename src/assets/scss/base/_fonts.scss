@@ -12,11 +12,7 @@ html, body {
     color: $color-base;
 
     @media (max-width: $break) {
-        font-size: calc(10 / #{$break} * 100vw);
-    }
-
-    @media (max-width: 320px) {
-        font-size: 10px;
+        font-size: calc(10 / #{$break-point-value} * 100vw);
     }
 }
 

@@ -52,15 +52,27 @@ const worksItem = {
     'blog': {
         'title': '無趣味の戯言（ブログ）',
         'link': 'https://blog.udcxx.me/',
-        'detail': '紹介テキストです。にほんご日本語ニホンゴNihongoにほんご日本語ニホンゴNihongoにほんご日本語ニホンゴNihongoにほんご日本語ニホンゴNihongo',
+        'detail': 'Nuxt.jsを利用してブログを制作し、Web系の技術的な記事を中心に更新しています。',
         'image': '../assets/img/cr-blog.jpg'
     },
     'aigo': {
         'title': 'アイゴ',
-        'link': 'https://',
-        'detail': 'わいわいわいわー',
+        'link': 'https://aigo.tokyo/',
+        'detail': '日本視覚障害者囲碁協会様のWebサイト制作に、コーディング面でお手伝いさせていただきました。Wordpressを使用しています。',
         'image': '../assets/img/cr-aigo.jpg'
-    }
+    },
+	'maedamisaki': {
+		'title': '真栄田岬',
+        'link': 'https://maedamisaki.jp/',
+        'detail': '観光地のWebサイト制作に、コーディング面でのお手伝いをさせていただきました。Wordpressを使用しています。',
+        'image': '../assets/img/cr-maedamisaki.jpg'
+	},
+	'app': {
+		'title': 'APPs by udcxx.',
+        'link': 'https://app.udcxx.me/',
+        'detail': '個人で制作した、AIツール・短縮URLツールなどを公開しています。',
+        'image': '../assets/img/cr-app.jpg'
+	}
 }
 const changeWorks = (toChange) => {
     document.querySelector('.works--image').src = worksItem[toChange].image;

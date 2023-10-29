@@ -25,6 +25,6 @@
     }
 
     @media (max-width: $break) {
-        font-size: min(#{$sizeSP}px, calc(#{$sizeSP}px - #{math.div($break, 100)} + 1.2vw));
+        font-size: min(#{$sizeSP}px, calc(#{$sizeSP}px - #{list.slash($break, 100)} + 1.2vw));
     }
 }

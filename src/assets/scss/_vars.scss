@@ -3,7 +3,9 @@
 //
 //   * break...SP表示を適用する最大の画面幅
 
-$break: 768px;
+$break-point-value: "768";
+$break: #{$break-point-value}px;
+
 
 
 
