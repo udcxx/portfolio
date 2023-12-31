@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Works｜udcxx PORTFOLIOS</title>
+    <meta name="description" content="だいちゃんのポートフォリオサイトです。これまでに制作したものと自己紹介のページ。">
+    <meta name="keywords" content="だいちゃん, ポートフォリオ, 作品, Web, フロントエンド">
+    <meta name="og:title" content="PORTFOLIOS by udcxx.">
+    <meta name="og:description" content="だいちゃんのポートフォリオサイトです">
+    <meta name="og:image" content="https://udcxx.me/assets/images/og.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=BIZ+UDPMincho&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/img/favicon.ico">
+    <script defer src="../assets/js/main.js"></script>
+    <script defer src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28582210-5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-28582210-5');
+        </script>
+    <!-- / GTA -->
+</head>
+<body>
+    <main>
+
+        <section id="top" class="top main_frame">
+            <div class="inner">
+                <div class="inner--left">
+                    <h2>Works</h2>
+                    <div>
+                        <img src="../assets/img/cr-blog.jpg" alt="" class="works--image">
+                        <div class="works--details">
+                            <h3 class="works--title">無趣味の戯言（ブログ）</h3>
+                            <p><a href="https://blog.udcxx.me/" class="works--link">https://blog.udcxx.me/</a></p>
+                            <p class="works--detail">Nuxt.jsを利用してブログを制作し、Web系の技術的な記事を中心に更新しています。</p>
+                        </div>
+                    </div>
+
+                    <ul class="works_other">
+                        <li class="works_other--item" onclick="changeWorks('blog')">
+                            <img src="../assets/img/cr-blog.jpg" alt="" class="works_other--image">
+                        </li>
+                        <li class="works_other--item" onclick="changeWorks('aigo')">
+                            <img src="../assets/img/cr-aigo.jpg" alt="" class="works_other--image">
+                        </li>
+                        <li class="works_other--item" onclick="changeWorks('app')">
+                            <img src="../assets/img/cr-app.jpg" alt="" class="works_other--image">
+                        </li>
+                        <li class="works_other--item">
+                            <a href="https://app.udcxx.me/creative-archives/" class="works_other--archives" target="_blank">そのほかの<br>Web制作実績</a>
+                        </li>
+                    </ul>
+
+                </div><!-- /inner--left-->
+
+                <div class="inner--right">
+                    <div class="side_menu">
+                        <ul class="side_menu--text_links">
+                            <li><a href="../" class="side_menu--text_link">TOP...</a></li>
+                            <li><a href="../about/" class="side_menu--text_link">About...</a></li>
+                            <li><a href="../history/" class="side_menu--text_link">History...</a></li>
+                        </ul>
+                        <ul class="side_menu--icon_links">
+                            <li><a href="" class="side_menu--icon_link"><img src="../assets/img/contact-github.png" alt=""></a></li>
+                            <li><a href="" class="side_menu--icon_link"><img src="../assets/img/contact-blog.png" alt=""></a></li>
+                            <li><a href="https://udcxx.me/contact/?sub=udcxx" class="side_menu--icon_link" target="_blank"><img src="../assets/img/contact-mail.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div><!-- /inner--right -->
+            </div>
+        </section><!-- /top-->
+
+        <section id="contactform" style="transition: opacity 1s ease-out 0s; opacity: 0; display: none;">
+            <div class="contactform-wrap">
+                <div class="contactform-inner">
+                    <h2>メールフォーム</h2>
+                    <p>💁‍♂️お気軽にお問い合わせください！</p>
+                    <form class="sendmail" action="sendMail.php" method="post">
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" name="user_name">
+                        <label for="mail">メールアドレス</label>
+                        <input type="email" id="mail" name="user_mail">
+                        <label for="msg">お問い合わせ内容</label>
+                        <textarea id="msg" name="user_message"></textarea>
+
+                        <div class="g-recaptcha" data-sitekey="6LcH4ysaAAAAAHmGu1JV_yyidJ2eynfx0kvWvG4c" data-callback="verify" data-theme="dark"></div>
+
+                        <div class="contactform-btn-area">
+                            <button type="submit" id="contactform-submit" class="button" onclick="fadeOut('contactform')">送信🚀</button>
+                            <button type="button" class="button" onclick="fadeOut('contactform')">閉じる</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section><!-- /contactform -->
+
+    </main>
+
+</body>
+</html>
