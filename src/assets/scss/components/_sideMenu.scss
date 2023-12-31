@@ -1,0 +1,62 @@
+@use "../vars" as *;
+@use "../function" as *;
+
+.side_menu {
+
+    &--text_links {
+        width: 80%;
+        margin: 0 auto;
+        @include fontsize(20, 15);
+
+        @media (max-width: $break) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+    }
+    &--text_link {
+        width: 100%;
+        margin: 0 0 1em;
+        padding-left: 2rem;
+        display: block;
+        position: relative;
+        font-family: $font-serif;
+        color: $color-base;
+        opacity: 0.6;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &::before {
+            content: '';
+            width: 1.4rem; height: 1.4rem;
+            display: block;
+            position: absolute;
+            left: -0.5rem; top: 50%;
+            transform: translateY(-50%);
+            background-image: url('../img/text_link_arrow.png');
+            background-position: center; background-repeat: no-repeat; background-size: contain;
+            @media (max-width: $break) {
+                width: 1.2rem; height: 1.2rem;
+            }
+        }
+    }
+
+    &--icon_links {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    &--icon_link {
+        width: 3rem;
+        display: block;
+        opacity: 0.6;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

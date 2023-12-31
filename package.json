@@ -1,27 +1,21 @@
 {
   "name": "udcxx-portfolio",
-  "version": "1.0.0",
+  "version": "23.0.0",
   "description": "My Portfolio Site",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass src/ -o dist/ --output-style compressed",
-    "watch:scss": "onchange \"src/**/*.scss\" -- npm run scss",
+    "sass": "sass --no-source-map --style=compressed src/assets/scss:dist/assets/css",
+    "watch:sass": "onchange \"src/**/*.scss\" -e \"src/**/style.scss\" -- node ./scripts/watch-sass.js",
     "server": "browser-sync start --server dist --files='./dist/*'",
     "watch:server": "browser-sync start --server dist --files='./dist/*'",
-    "imgmin": "node imagemin.js",
     "cpx-img": "cpx \"src/**/*.{jpg,jpeg,png,gif,svg}\" \"dist/\"",
     "watch:cpx-img": "onchange \"src/**/*.{jpg,jpeg,png,gif,svg}\" -- npm run cpx-img",
     "cpx-html": "cpx \"src/**/*.html\" \"dist/\"",
     "watch:cpx-html": "onchange \"src/**/*.html\" -- npm run cpx-html",
     "cpx-js": "cpx \"src/**/*.js\" \"dist/\"",
     "watch:cpx-js": "onchange \"src/**/*.js\" -- npm run cpx-js",
-    "dev": "run-p watch:*",
-    "deploy": "node git-ftp.js"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run deploy"
-    }
+    "dev": "run-s cpx-img cpx-html cpx-js sass all-run-watch",
+    "all-run-watch": "run-p watch:*",
+    "deploy": "node ./scripts/ftp-upload.js"
   },
   "repository": {
     "type": "git",
@@ -35,17 +29,10 @@
   "homepage": "https://github.com/udcxx/portfolio#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "cpx": "^1.5.0",
-    "husky": "^4.2.3",
-    "imagemin": "^7.0.1",
-    "imagemin-gifsicle": "^7.0.0",
-    "imagemin-keep-folder": "^5.3.2",
-    "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-pngquant": "^8.0.0",
-    "imagemin-svgo": "^7.1.0",
-    "node-sass": "^4.13.1",
+    "cpx2": "^5.0.0",
     "npm-run-all": "^4.1.5",
-    "onchange": "^6.1.0",
-    "watch": "^1.0.2"
+    "onchange": "^7.1.0",
+    "sass": "^1.58.0",
+    "watch": "^0.13.0"
   }
 }
