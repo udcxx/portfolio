@@ -9,8 +9,8 @@
             &copy; {{ year }} udcxx.
         </div>
         <ul>
-            <li><a href="https://app.udcxx.me/">ツール・API</a></li>
-            <li><a href="https://blog.udcxx.me/">ブログ</a></li>
+            <li><TextLink href="https://app.udcxx.me/" type="gray">ツール・API</TextLink></li>
+            <li><TextLink href="https://blog.udcxx.me/" type="gray">ブログ</TextLink></li>
         </ul>
     </footer>
 </template>
@@ -19,7 +19,7 @@
 footer {
     width: 100vw;
     margin-top: 20px;
-    padding-left: 2em;
+    padding: 2em 0 2em 2em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,7 +43,7 @@ ul {
         &::after {
             content: '｜';
             position: absolute;
-            right: 0;
+            right: -0.5em;
         }
         &:nth-last-of-type(1)::after {
             content: none;
@@ -52,12 +52,6 @@ ul {
         a {
             display: inline-block;
             padding: 0 2em;
-            color: $gray;
-
-            &:hover {
-                color: $orange;
-                text-shadow: 0px 0px 3px $black;
-            }
         }
     }
 }

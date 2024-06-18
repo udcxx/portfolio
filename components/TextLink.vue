@@ -1,14 +1,38 @@
 <script setup lang="ts">
     interface Props {
-        href: String,
-        type: String
+        href: string
+        type: string
     }
-    const props = defineProps<Props>()
+    const props = defineProps<Props>();
+
+    const isExternalLink = props.href.indexOf('http') >= 0 ? true : false
 </script>
 
 <template>
-    <v-if >
+    <a v-if="isExternalLink" :href=href :class=type><slot></slot></a>
 
-    </v-if>
-    <a href="{{ href }}"><slot></a>
+    <NuxtLink v-else :class=type :to="href"><slot></slot></NuxtLink>
 </template>
+
+<style lang="scss" scoped>
+.black {
+    color: $black;
+
+    &:hover {
+        color: $orange;
+        // text-shadow: 0px 0px 3px $black;
+    }
+}
+
+.gray {
+    color: $gray;
+
+    &:hover {
+        color: $orange;
+        text-shadow: 0px 0px 3px $black;
+    }
+}
+
+
+
+</style>

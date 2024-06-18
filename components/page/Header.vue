@@ -3,8 +3,9 @@
         <div class="header_bar">
             <h1>udcxx.</h1>
             <ul>
-                <li><a href="https://app.udcxx.me/">ツール・API</a></li>
-                <li><a href="https://blog.udcxx.me/">ブログ</a></li>
+                <li><TextLink href="https://app.udcxx.me/" type="black">ツール・API</TextLink></li>
+                <li><TextLink href="https://blog.udcxx.me/" type="black">ブログ</TextLink></li>
+                <li><TextLink href="sample" type="black">サンプル</TextLink></li>
             </ul>
         </div><!-- /header_bar -->
     </div><!-- /header -->
@@ -43,7 +44,7 @@ ul {
         &::after {
             content: '｜';
             position: absolute;
-            right: 0;
+            right: -0.5em;
         }
         &:nth-last-of-type(1)::after {
             content: none;
@@ -52,13 +53,6 @@ ul {
         a {
             display: inline-block;
             padding: 0 2em;
-            color: $black;
-            font-weight: bold;
-
-            &:hover {
-                color: $orange;
-                // text-shadow: 0px 0px 3px $black;
-            }
         }
     }
 }
