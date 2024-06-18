@@ -2,7 +2,8 @@
 import type { DefineComponent, SlotsType } from 'vue'
 type IslandComponent<T extends DefineComponent> = T & DefineComponent<{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, SlotsType<{ fallback: { error: unknown } }>>
 interface _GlobalComponents {
-      'TextLink': typeof import("../components/TextLink.vue")['default']
+      'SectionTitle': typeof import("../components/SectionTitle.vue")['default']
+    'TextLink': typeof import("../components/TextLink.vue")['default']
     'PageFooter': typeof import("../components/page/Footer.vue")['default']
     'PageHeader': typeof import("../components/page/Header.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
@@ -28,7 +29,8 @@ interface _GlobalComponents {
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
-      'LazyTextLink': typeof import("../components/TextLink.vue")['default']
+      'LazySectionTitle': typeof import("../components/SectionTitle.vue")['default']
+    'LazyTextLink': typeof import("../components/TextLink.vue")['default']
     'LazyPageFooter': typeof import("../components/page/Footer.vue")['default']
     'LazyPageHeader': typeof import("../components/page/Header.vue")['default']
     'LazyNuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
@@ -68,6 +70,7 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const SectionTitle: typeof import("../components/SectionTitle.vue")['default']
 export const TextLink: typeof import("../components/TextLink.vue")['default']
 export const PageFooter: typeof import("../components/page/Footer.vue")['default']
 export const PageHeader: typeof import("../components/page/Header.vue")['default']
@@ -94,6 +97,7 @@ export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
+export const LazySectionTitle: typeof import("../components/SectionTitle.vue")['default']
 export const LazyTextLink: typeof import("../components/TextLink.vue")['default']
 export const LazyPageFooter: typeof import("../components/page/Footer.vue")['default']
 export const LazyPageHeader: typeof import("../components/page/Header.vue")['default']

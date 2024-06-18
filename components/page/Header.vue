@@ -29,6 +29,11 @@
     background-color: $white;
 }
 
+h1 {
+    font-size: 24px; font-weight: 500;
+    font-family: 'Ubuntu';
+}
+
 ul {
     list-style-type: none;
     flex-shrink: 0;
