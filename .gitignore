@@ -1,65 +1,24 @@
-# Created by https://www.gitignore.io/api/macos,windows
-
-### macOS ###
-*.DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must end with two \r
-Icon
-
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-
-### Windows ###
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-.DS_Store
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# Node.js
-node_modules
-bower_components
-package-lock.json
-
-# dist Folder
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
 dist
 
-# reCAPTCHA
-recaptcha_vars.php
+# Node dependencies
+node_modules
 
-# FTP Settings
-secret-infos.json
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
