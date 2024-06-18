@@ -6,8 +6,8 @@
                 const h = window.scrollY;
                 const x = e.clientX;
                 const y = e.clientY;
-                const gradient = `radial-gradient(circle at ${x}px ${y + h}px, rgb(102, 161, 102), rgb(6, 30, 34) 40%)`;
-                document.querySelector('html').style.background = gradient;
+                const gradient = `radial-gradient(circle at ${x}px ${y + h}px, rgb(102, 161, 102), rgb(6, 30, 34) 30%)`;
+                document.body.style.background = gradient;
             });   
         }
     });
@@ -15,13 +15,18 @@
 
 <template>
     <PageHeader />
-    <slot />
+    <main>
+        <slot />
+    </main>
     <PageFooter />
 </template>
 
 <style lang="scss">
 html {
+    background-color: $deep-green;
+}
+body {
     min-height: 100vh; min-height: 100lvh;
-    background: radial-gradient(circle at 50% 50%, rgb(102, 161, 102), rgb(6, 30, 34) 40%);
+    background: radial-gradient(circle at 50% 50%, rgb(102, 161, 102), rgb(6, 30, 34) 30%);
 }
 </style>
