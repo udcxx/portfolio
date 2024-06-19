@@ -24,13 +24,18 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top: 20px; left: 0; right: 0;
+    top: 20px; left: 0; right: 0; z-index: 5;
+    // border: 1px solid rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
     border-radius: 45px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.3);
     background-color: $white;
+    // background: rgba(102, 161, 102, 0.5);
 }
 
 h1 {
-    font-size: 24px; font-weight: 500;
+    font-size: 30px; font-weight: 500;
     font-family: 'Ubuntu';
 }
 
