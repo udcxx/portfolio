@@ -1,3 +1,29 @@
+//
+// ブレイクポイント
+//
+//   * break...SP表示を適用する最大の画面幅
+
+$break-point-value: "768";
+$break: #{$break-point-value}px;
+
+
+
+//
+// 横幅
+//
+//   * wrap-max...最大の横幅（ヘッダー内の要素など）
+//   * wrap...通常の横幅
+//   * inner...コンテンツの横幅
+
+$wrap-max: 1440px;
+$wrap: 1000px;
+$inner: 800px;
+
+
+
+//
+// カラー
+//
 $bg-main-color: #061E22;
 
 $light-orange: #f1a957;
@@ -9,4 +35,14 @@ $light-gray: #d1d5d5;
 $deep-green: #061E22;
 $light-green: #5cca5c;
 
-$view-point: 768;
+
+
+//
+// フォント 
+//
+//   * font-sans-serif...ゴシック体
+//   * font-serif...明朝体
+
+$font-sans-serif: 'BIZ UDPGothic', 'Noto Color Emoji', sans-serif;
+$font-logo: 'Ubuntu';
+$font-serif: 'sans';

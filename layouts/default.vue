@@ -26,9 +26,11 @@ html {
     background-color: $deep-green;
 }
 body {
+    width: 100vw;
     min-height: 100vh; min-height: 100lvh;
     font-family: 'BIZ UDPGothic', 'Noto Color Emoji', sans-serif;
     font-size: 14px;
+    overflow-x: hidden;
     background: radial-gradient(circle at 50% 50%, rgb(102, 161, 102), rgb(6, 30, 34) 30%);
 }
 </style>

@@ -3,15 +3,15 @@
         href: string
         type: string
     }
-    const props = defineProps<Props>();
+    const props: any= defineProps<Props>();
 
-    const isExternalLink = props.href.indexOf('http') >= 0 ? true : false
+    const isExternalLink: boolean = props.href.indexOf('http') >= 0 ? true : false
 </script>
 
 <template>
-    <a v-if="isExternalLink" :href=href :class=type><slot></slot></a>
+    <a v-if="isExternalLink" :href=props.href :class=props.type><slot></slot></a>
 
-    <NuxtLink v-else :class=type :to="href"><slot></slot></NuxtLink>
+    <NuxtLink v-else :class=props.type :to=props.href><slot></slot></NuxtLink>
 </template>
 
 <style lang="scss" scoped>

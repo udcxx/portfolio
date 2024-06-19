@@ -1,0 +1,83 @@
+@use 'sass:math';
+
+//
+// 枠組み
+//
+
+.wrap {
+    width: 100%; max-width: $wrap;
+    margin: 0 auto;
+    &.-max {
+        max-width: $wrap-max;
+    }
+}
+
+.inner {
+    width: calc(#{math.div($inner, $wrap) * 100vw}); max-width: $inner;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+//
+// 文字
+//
+
+.yakuhan {
+    margin: auto -0.4em;
+}
+
+
+
+//
+// PC / SPでの出し分け
+//
+
+.forsp {
+    display: none;
+    @media (max-width:$break) {
+        display: block;
+    }
+}
+.forpc {
+    display: block;
+    @media (max-width:$break) {
+        display: none;
+    }
+}
+
+br {
+    &.forsp {
+        display: none;
+        @media (max-width:$break) {
+            display: inline;
+        }
+    }
+    &.forpc {
+        display: inline;
+        @media (max-width:$break) {
+            display: none;
+        }
+    }
+}
+
+.flex {
+    &.forsp {
+        display: none;
+        @media (max-width:$break) {
+            display: flex;
+        }
+    }
+    &.forpc {
+        display: flex;
+        @media (max-width:$break) {
+            display: none;
+        }
+    }
+}
