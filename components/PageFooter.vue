@@ -9,8 +9,8 @@
             &copy; {{ year }} udcxx.
         </div>
         <ul>
-            <li><TextLink href="https://app.udcxx.me/" type="gray">ツール・API</TextLink></li>
-            <li><TextLink href="https://blog.udcxx.me/" type="gray">ブログ</TextLink></li>
+            <li><AtomsTextLink href="https://app.udcxx.me/" type="gray">ツール・API</AtomsTextLink></li>
+            <li><AtomsTextLink href="https://blog.udcxx.me/" type="gray">ブログ</AtomsTextLink></li>
         </ul>
     </footer>
 </template>

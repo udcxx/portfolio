@@ -19,7 +19,7 @@ span {
 }
 
 h2 {
-    margin-bottom: 3em;
+    margin-bottom: 3rem;
     text-align: center;
     font-size: 18px; font-weight: 500;
     color: $gray;

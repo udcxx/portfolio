@@ -7,9 +7,9 @@
         <div class="header_bar" :class="direction">
             <h1>udcxx.</h1>
             <ul>
-                <li><TextLink href="https://app.udcxx.me/" type="black">ツール・API</TextLink></li>
-                <li><TextLink href="https://blog.udcxx.me/" type="black">ブログ</TextLink></li>
-                <li><TextLink href="sample" type="black">{{ direction }}</TextLink></li>
+                <li><AtomsTextLink href="https://app.udcxx.me/" type="black">ツール・API</AtomsTextLink></li>
+                <li><AtomsTextLink href="https://blog.udcxx.me/" type="black">ブログ</AtomsTextLink></li>
+                <li><AtomsTextLink href="sample" type="black">{{ direction }}</AtomsTextLink></li>
             </ul>
         </div><!-- /header_bar -->
     </div><!-- /header -->
