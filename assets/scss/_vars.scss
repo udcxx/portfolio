@@ -1,3 +1,6 @@
+@use "sass:list";
+@use "sass:math";
+
 //
 // ブレイクポイント
 //
@@ -16,8 +19,8 @@ $break: #{$break-point-value}px;
 //   * inner...コンテンツの横幅
 
 $wrap-max: 1440px;
-$wrap: 1000px;
-$inner: 800px;
+$wrap: 1024px;
+$inner: 1000px;
 
 
 
@@ -46,3 +49,35 @@ $light-green: #5cca5c;
 $font-sans-serif: 'BIZ UDPGothic', 'Noto Color Emoji', sans-serif;
 $font-logo: 'Ubuntu';
 $font-serif: 'sans';
+
+
+
+//
+// フォントサイズ
+//
+@mixin fontsize($size...) {
+
+    $sizePC: nth($size, 1);
+    $sizeTB: nth($size, 1);
+    $sizeSP: nth($size, 1);
+
+    @if (length($size) == 2) {
+        $sizePC: nth($size, 1);
+        $sizeTB: nth($size, 1);
+        $sizeSP: nth($size, 2);
+    }  @else if (length($size) == 3) {
+        $sizePC: nth($size, 1);
+        $sizeTB: nth($size, 2);
+        $sizeSP: nth($size, 3);
+     }
+
+    font-size: #{$sizePC}px;
+
+    @media (max-width: $wrap) {
+        font-size: min(#{$sizeTB}px, calc(#{$sizeTB}px - #{list.slash($wrap, 100)} + 1vw));
+    }
+
+    @media (max-width: $break) {
+        font-size: min(#{$sizeSP}px, calc(#{$sizeSP}px - #{list.slash($break-point-value, 100)} + 1.2vw));
+    }
+}

@@ -19,26 +19,34 @@
 
 <style lang="scss" scoped>
 
-.wrap {
-    width: 100%; max-width: 1080px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
 .fv {
-    width: 100%; height: 90vh;
+    height: 90vh;
+    margin-bottom: 5rem;
     position: relative;
     
     h2 {
         margin: 0 auto;
         position: absolute;
         top: 50%; left: 0; right: 0;
-        font-size: 40px;
+        @include fontsize(20);
     }
+}
 
-    &.wrap {
-        padding: 0;
+.about {
+    margin-bottom: 5rem;
+
+    .bord {
+        width: 90%;
+        margin: 0 auto;
     }
+}
+
+.creative {
+    margin-bottom: 5rem;
+}
+
+.history {
+    margin-bottom: 5rem;
 }
 
 </style>

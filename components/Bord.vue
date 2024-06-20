@@ -6,8 +6,6 @@
 
 <style lang="scss" scoped>
 .bord {
-    width: 80%;
-    margin: 0 auto;
     padding: 2em;
     color: $white;
     font-size: 14px;

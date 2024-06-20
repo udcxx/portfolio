@@ -16,7 +16,7 @@
     padding-top: 90px;
 }
 .header_bar {
-    width: 98%; max-width: 1280px; height: 50px;
+    width: 98%; max-width: $wrap-max; height: 50px;
     margin: 0 auto;
     padding-left: 2em;
     color: $black;
@@ -28,15 +28,14 @@
     // border: 1px solid rgba(255, 255, 255, 0.25);
     box-sizing: border-box;
     border-radius: 45px;
-    backdrop-filter: blur(20px);
     box-shadow: 0 4px 30px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
     background-color: $white;
-    // background: rgba(102, 161, 102, 0.5);
 }
 
 h1 {
-    font-size: 30px; font-weight: 500;
-    font-family: 'Ubuntu';
+    @include fontsize(30);
+    font-weight: 500; font-family: 'Ubuntu';
 }
 
 ul {
