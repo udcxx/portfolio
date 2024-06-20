@@ -1,6 +1,11 @@
 <script setup>
-    import { onMounted } from 'vue';
+    import { ref, onMounted } from 'vue';
+
+    let direction = ref('down');
+    let currentY = 0;
+
     onMounted(() => {
+        // 背景グラデーション用のmousemoveイベント
         if (window.innerWidth >= 768) {
             document.addEventListener('mousemove', (e) => {
                 const h = window.scrollY;
@@ -9,12 +14,19 @@
                 const gradient = `radial-gradient(circle at ${x}px ${y + h}px, rgb(102, 161, 102), rgb(6, 30, 34) 30%)`;
                 document.body.style.background = gradient;
             });   
-        }
+        };
+
+        // ヘッダー用の scroll イベント
+        document.addEventListener('scroll', () => {
+            let scrolledY = window.scrollY;
+            direction.value = currentY <= scrolledY ? 'down' : 'up';
+            currentY = scrolledY;
+        });
     });
 </script>
 
 <template>
-    <PageHeader />
+    <PageHeader :direction="direction" />
     <main>
         <slot />
     </main>

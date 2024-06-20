@@ -1,11 +1,15 @@
+<script setup lang="ts">
+    const props = defineProps<{ direction: string }>();
+</script>
+
 <template>
     <div class="header">
-        <div class="header_bar">
+        <div class="header_bar" :class="direction">
             <h1>udcxx.</h1>
             <ul>
                 <li><TextLink href="https://app.udcxx.me/" type="black">ツール・API</TextLink></li>
                 <li><TextLink href="https://blog.udcxx.me/" type="black">ブログ</TextLink></li>
-                <li><TextLink href="sample" type="black">サンプル</TextLink></li>
+                <li><TextLink href="sample" type="black">{{ direction }}</TextLink></li>
             </ul>
         </div><!-- /header_bar -->
     </div><!-- /header -->
@@ -25,12 +29,17 @@
     align-items: center;
     position: fixed;
     top: 20px; left: 0; right: 0; z-index: 5;
+    transition: transform 0.3s 0.1s;
     // border: 1px solid rgba(255, 255, 255, 0.25);
     box-sizing: border-box;
     border-radius: 45px;
     box-shadow: 0 4px 30px rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(20px);
     background-color: $white;
+
+    &.down {
+        transform: translateY(-50vh);
+    }
 }
 
 h1 {
