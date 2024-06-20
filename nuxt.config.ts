@@ -2,6 +2,15 @@
 export default defineNuxtConfig({
 	app: {
 		head: {
+			title: 'udcxx Portfolio',
+			meta: [
+                { charset: 'utf-8' },
+                { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+                { name: 'description', content: 'だいちゃん / udcxx がこれまでに制作したWebページや、経歴などを紹介するポートフォリオサイトです。'},
+                { hid: 'og:site_name', property: 'og:site_name', content: 'udcxx Portfolio' },
+                // { name: 'og:image', content: '/images/blog-card.png'},
+                { name: 'twitter:card', content: 'summary_large_image' },
+            ],
 			link: [
 				{rel: 'preconnect', href: 'https://fonts.googleapis.com'},
 				{rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: ''},
@@ -11,12 +20,17 @@ export default defineNuxtConfig({
 		}
 	},
 	devtools: { enabled: true },
-	css: ['~/assets/scss/_reset.scss'],
+	css: [
+		'~/assets/scss/reset.scss',
+		'~/assets/scss/classes.scss'
+	],
 	vite: {
 		css: {
 			preprocessorOptions: {
 				scss: {
-					additionalData: '@use "~/assets/scss/_vars.scss" as *;'
+					additionalData: `
+					@use "~/assets/scss/_vars.scss" as *;
+					@use "~/assets/scss/_functions.scss" as *;`
 				}
 			}
 		}
