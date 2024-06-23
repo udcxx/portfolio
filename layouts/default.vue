@@ -43,6 +43,6 @@ body {
     font-family: 'BIZ UDPGothic', 'Noto Color Emoji', sans-serif;
     @include fontsize(14);
     overflow-x: hidden;
-    background: radial-gradient(circle at 50% 50%, rgb(102, 161, 102), rgb(6, 30, 34) 30%);
+    background: radial-gradient(circle at right 50vh, rgb(102, 161, 102), rgb(6, 30, 34) 30%);
 }
 </style>
