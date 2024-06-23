@@ -8,6 +8,12 @@
     </ToppageSection><!-- /about -->
 
     <ToppageSection titleJa="制作実績" titleEn="creative">
+        <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" subtitle="AIでkintone活用をサポート！" eyecatch="/creative/recitone.png" :isBig="true">
+            <p>AIを使ったWebツール「RECITONE」を開発しました。<br>RECITONEは、kintoneで何を管理したいかを入力するだけで、kintoneアプリの設計図となる「レシピ」をAIが提案してくれるツールです。</p>
+        </CreativeCard>
+        <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" eyecatch="">
+            <p>kintoneで何を管理したいかを入力するだけで、kintoneアプリの設計図となる「レシピ」をAIが提案してくれるツールです。</p>
+        </CreativeCard>
 
     </ToppageSection><!-- /creative -->
 
@@ -27,14 +33,22 @@
         margin: 0 auto;
         position: absolute;
         top: 50%; left: 0; right: 0;
-        @include fontsize(20);
+        color: $light-gray;
+        @include fontsize(60); font-weight: 500; font-family: $font-logo;
     }
 }
 
 .about {
     .bord {
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
+    }
+}
+
+.creative {
+    .card {
+        width: 95%;
+        margin: 0 auto 2rem;
     }
 }
 

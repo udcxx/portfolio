@@ -6,7 +6,7 @@
 
 <style lang="scss" scoped>
 .bord {
-    padding: 2em;
+    padding: 2rem;
     color: $white;
     font-size: 14px;
     line-height: 2em; letter-spacing: 0.05em;
