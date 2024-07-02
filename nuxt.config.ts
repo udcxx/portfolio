@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	app: {
+		baseURL: '/portfolio/', // Dev環境用
 		head: {
 			title: 'udcxx Portfolio',
 			meta: [
