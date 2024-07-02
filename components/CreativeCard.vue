@@ -82,7 +82,7 @@
 .title {
     display: inline-block;
     padding: 1rem 1.5rem;
-    @include fontsize(30);
+    @include fontsize(32);
     font-weight: bold;
     color: $black;
     line-height: 1em;
@@ -103,12 +103,12 @@
 }
 .discription {
     padding: 1rem;
-    @include fontsize(14);
+    @include fontsize(14, 16);
     line-height: 2em;
     color: $black;
     position: absolute;
     box-sizing: border-box;
     border-radius: 10px;
-    background-color: $white;
+    background-color: $light-green;
 }
 </style>
