@@ -35,13 +35,13 @@
 
 <style lang="scss">
 html {
+    font-size: 10px;
     background-color: $deep-green;
 }
 body {
     width: 100vw;
     min-height: 100vh; min-height: 100lvh;
     font-family: 'BIZ UDPGothic', 'Noto Color Emoji', sans-serif;
-    @include fontsize(14);
     overflow-x: hidden;
     background: radial-gradient(circle at right 50vh, rgb(102, 161, 102), rgb(6, 30, 34) 30%);
 }
