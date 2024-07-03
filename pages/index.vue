@@ -4,7 +4,12 @@
     </section><!-- /fv -->
 
     <ToppageSection title-ja="udcxxについて" title-en="about">
-        <AtomsBord>こんにちは👋<br>ポートフォリオサイトをご覧いただき、ありがとうございます🙌</AtomsBord>
+        <AtomsBord>
+            <p>こんにちは👋（udcxx）です。ポートフォリオをご覧いただきありがとうございます🙌</p>
+            <p>小さい頃からパソコンが好きで、Web系の会社などを経て、現在はテクニカルサポートとして、ユーザー様の困りごとをいち早く解決できるように全力を注いでます💪</p>
+            <p>Webへの興味も捨てられず、勉強がてらこのポートフォリオサイトもほぼ毎年作り変えています🎨<br>ほかにも、kintoneのカスタマイズやブックマークレットなど、業務をちょっと改善するコードを書いたり、Webツールを作って公開したりと、公私ともにインプット・アウトプットを繰り返して日々成長中！</p>
+            <p>Web, JavaScript, kintone... に関することなら一度お声掛けください📣 なにかお役に立てるかもしれません。</p>
+        </AtomsBord>
     </ToppageSection><!-- /about -->
 
     <ToppageSection title-ja="制作実績" titleEn="creative">
@@ -24,7 +29,17 @@
     </ToppageSection>
 
     <ToppageSection title-ja="これまでの経歴" title-en="history">
-
+        <AtomsBord>
+            <span>2021.09 ～</span>
+            <p>テクサポ＠ITサポート企業</p>
+            <p>クラウド製品のテクニカルサポート（電話/メール）を担当し、基本機能のサポートに加えて、APIに関するサポートも兼任。<br>業務効率化のため、ブックマークレットやkintoneカスタマイズの作成も行う。</p>
+            <ul>
+                <li>kintone</li>
+                <li>API</li>
+                <li>JavaScript</li>
+                <li>サポート</li>
+            </ul>
+        </AtomsBord>
     </ToppageSection><!-- /history -->
 </template>
 
