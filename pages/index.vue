@@ -5,15 +5,15 @@
 
     <ToppageSection title-ja="udcxxについて" title-en="about">
         <AtomsBord>
-            <p>こんにちは👋（udcxx）です。ポートフォリオをご覧いただきありがとうございます🙌</p>
+            <p>こんにちは👋 だいちゃん / udcxx です。<br>ポートフォリオをご覧いただきありがとうございます🙌</p>
             <p>小さい頃からパソコンが好きで、Web系の会社などを経て、現在はテクニカルサポートとして、ユーザー様の困りごとをいち早く解決できるように全力を注いでます💪</p>
-            <p>Webへの興味も捨てられず、勉強がてらこのポートフォリオサイトもほぼ毎年作り変えています🎨<br>ほかにも、kintoneのカスタマイズやブックマークレットなど、業務をちょっと改善するコードを書いたり、Webツールを作って公開したりと、公私ともにインプット・アウトプットを繰り返して日々成長中！</p>
+            <p>Webへの興味も捨てられず、勉強がてら、このポートフォリオサイトもほぼ毎年作り変えています🎨<br>ほかにも、kintoneのカスタマイズやブックマークレットなど、業務をちょっと改善するコードを書いたり、Webツールを作って公開したりと、公私ともにインプット・アウトプットを繰り返して日々成長中！</p>
             <p>Web, JavaScript, kintone... に関することなら一度お声掛けください📣 なにかお役に立てるかもしれません。</p>
         </AtomsBord>
     </ToppageSection><!-- /about -->
 
     <ToppageSection title-ja="制作実績" titleEn="creative">
-        <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" subtitle="AIでkintone活用をサポート！" eyecatch="/creative/recitone.png" :isBig="true">
+        <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" subtitle="AIでkintone活用をサポート！" eyecatch="./creative/recitone.png" :isBig="true">
             <p>AIを使ったWebツール「RECITONE」を開発しました。<br>RECITONEは、kintoneで何を管理したいかを入力するだけで、kintoneアプリの設計図となる「レシピ」をAIが提案してくれるツールです。</p>
         </CreativeCard>
         <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" eyecatch="">
@@ -63,6 +63,10 @@
     .bord {
         width: 95%;
         margin: 0 auto;
+
+        p {
+            margin-bottom: 1em;
+        }
     }
 }
 
