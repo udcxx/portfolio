@@ -11,6 +11,7 @@
         <ul>
             <li><AtomsTextLink href="https://app.udcxx.me/" type="gray">ツール・API</AtomsTextLink></li>
             <li><AtomsTextLink href="https://blog.udcxx.me/" type="gray">ブログ</AtomsTextLink></li>
+            <li><AtomsTextLink href="https://udcxx.me/contact/" type="gray">お問い合わせ</AtomsTextLink></li>
         </ul>
     </footer>
 </template>
@@ -35,6 +36,7 @@ ul {
     justify-content: flex-end;
 
     li {
+        @include fontsize(14);
         display: block;
         position: relative;
         text-align: center;

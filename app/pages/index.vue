@@ -33,17 +33,15 @@
     </ToppageSection> -->
 
     <ToppageSection title-ja="これまでの経歴" title-en="history">
-        <AtomsBord>
-            <span>2021.09 ～</span>
-            <p>テクサポ＠ITサポート企業</p>
+        <HistoryCard year="2021.09" title="テクサポ＠ITサポート企業" :tags="['kintone', 'API', 'JavaScript', 'IT全般']">
             <p>クラウド製品のテクニカルサポート（電話/メール）を担当し、基本機能のサポートに加えて、APIに関するサポートも兼任。<br>業務効率化のため、ブックマークレットやkintoneカスタマイズの作成も行う。</p>
-            <ul>
-                <li>kintone</li>
-                <li>API</li>
-                <li>JavaScript</li>
-                <li>サポート</li>
-            </ul>
-        </AtomsBord>
+        </HistoryCard>
+        <HistoryCard year="2021.09" title="テクサポ＠ITサポート企業" :tags="['kintone', 'API', 'JavaScript', 'IT全般']">
+            <p>クラウド製品のテクニカルサポート（電話/メール）を担当し、基本機能のサポートに加えて、APIに関するサポートも兼任。<br>業務効率化のため、ブックマークレットやkintoneカスタマイズの作成も行う。</p>
+        </HistoryCard>
+        <HistoryCard year="2021.09" title="テクサポ＠ITサポート企業" :tags="['kintone', 'API', 'JavaScript', 'IT全般']">
+            <p>クラウド製品のテクニカルサポート（電話/メール）を担当し、基本機能のサポートに加えて、APIに関するサポートも兼任。<br>業務効率化のため、ブックマークレットやkintoneカスタマイズの作成も行う。</p>
+        </HistoryCard>
     </ToppageSection><!-- /history -->
 </template>
 
@@ -86,7 +84,13 @@
         margin: 0 auto 2rem;
 
         &.big { width: 100%; }
-        &.small { width: 48%; }
+        &.small { 
+            width: 48%; 
+
+            @media (max-width: #{$break}) {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -94,6 +98,13 @@
     .bord {
         width: 95%; max-width: 600px; 
         margin: 0 auto;
+    }
+}
+
+.history {
+    .bord {
+        width: 95%; 
+        margin: 0 auto 2rem;
     }
 }
 

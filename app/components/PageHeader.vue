@@ -7,9 +7,9 @@
         <div class="header_bar" :class="direction">
             <h1>udcxx.</h1>
             <ul>
-                <li><AtomsTextLink href="https://app.udcxx.me/" type="black">ツール・API</AtomsTextLink></li>
-                <li><AtomsTextLink href="https://blog.udcxx.me/" type="black">ブログ</AtomsTextLink></li>
-                <li><AtomsTextLink href="sample" type="black">{{ direction }}</AtomsTextLink></li>
+                <li><AtomsTextLink href="#about" type="black">about</AtomsTextLink></li>
+                <li><AtomsTextLink href="#creative" type="black">creative</AtomsTextLink></li>
+                <li><AtomsTextLink href="#history" type="black">history</AtomsTextLink></li>
             </ul>
         </div><!-- /header_bar -->
     </div><!-- /header -->
@@ -29,7 +29,7 @@
     align-items: center;
     position: fixed;
     top: 20px; left: 0; right: 0; z-index: 5;
-    transition: transform 0.3s 0.1s;
+    transition: transform 0.5s 0s;
     // border: 1px solid rgba(255, 255, 255, 0.25);
     box-sizing: border-box;
     border-radius: 45px;
@@ -54,6 +54,7 @@ ul {
     justify-content: flex-end;
 
     li {
+        @include fontsize(14);
         display: block;
         position: relative;
         text-align: center;

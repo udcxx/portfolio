@@ -15,6 +15,6 @@
 
 <style lang="scss">
 .wrap {
-    margin-bottom: 7rem;
+    margin-bottom: 10rem;
 }
 </style>
