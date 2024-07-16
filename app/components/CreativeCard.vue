@@ -32,9 +32,6 @@
     position: relative;
 
     &.big {
-        .image {
-            width: 100%; height: 50vh;
-        }
         .title {
             top: 4rem; left: 0;
         }
@@ -50,17 +47,18 @@
 
     &.small {
         .image {
-            width: 60%; height: 30vh;
+            width: 100%; height: 30vh;
         }
         .title {
-            top: 2rem; left: 55%;
+            top: 2rem; left: 0;
         }
         .subtitle {
             top: 8rem; left: 55%;
         }
         .discription {
-            width: calc(45% - 2rem);
-            bottom: 2rem; right: 2rem;
+            width: calc(100% - 2rem);
+            margin: 0 auto;
+            bottom: 1rem; left: 0; right: 0;
         }
     }
 
@@ -71,6 +69,7 @@
 }
 
 .image {
+    width: 100%; height: 50vh;
     overflow: hidden;
     img {
         width: 100%; height: 100%;
@@ -80,21 +79,21 @@
     }
 }
 .title {
+    @include fontsize(32);
     display: inline-block;
     padding: 1rem 1.5rem;
-    @include fontsize(32);
     font-weight: bold;
-    color: $black;
+    color: $deep-green;
+    text-shadow: 1px 1px 0px $deep-green, 1px -1px 0px $deep-green, -1px 1px 0px $deep-green, -1px -1px 0px $deep-green;
     line-height: 1em;
     position: absolute;
-    // background-color: rgba(255, 255, 255, 0.6);
     background: linear-gradient(15deg, rgb(249, 248, 113), rgb(26, 117, 95));
     box-sizing: border-box;
 }
 .subtitle {
+    @include fontsize(18);
     display: inline-block;
     padding: 1rem 1.5rem;
-    @include fontsize(18);
     color: $deep-green;
     line-height: 1em;
     position: absolute;
@@ -102,13 +101,14 @@
     box-sizing: border-box;
 }
 .discription {
-    padding: 1rem;
     @include fontsize(14, 16);
+    padding: 1rem;
     line-height: 2em;
-    color: $black;
+    color: $white;
     position: absolute;
     box-sizing: border-box;
     border-radius: 10px;
-    background-color: $light-green;
+    background-color: $deep-green;
+    box-shadow: 0px -1px 2px $light-green;
 }
 </style>

@@ -13,20 +13,24 @@
     </ToppageSection><!-- /about -->
 
     <ToppageSection title-ja="制作実績" titleEn="creative">
-        <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" subtitle="AIでkintone活用をサポート！" eyecatch="./creative/recitone.png" :isBig="true">
-            <p>AIを使ったWebツール「RECITONE」を開発しました。<br>RECITONEは、kintoneで何を管理したいかを入力するだけで、kintoneアプリの設計図となる「レシピ」をAIが提案してくれるツールです。</p>
-        </CreativeCard>
-        <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" eyecatch="">
-            <p>kintoneで何を管理したいかを入力するだけで、kintoneアプリの設計図となる「レシピ」をAIが提案してくれるツールです。</p>
-        </CreativeCard>
-
+        <div class="items">
+            <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" subtitle="AIでkintone活用をサポート！" eyecatch="./creative/recitone.png" :isBig="true">
+                <p>AIを使ったWebツール「RECITONE」を開発しました。<br>RECITONEは、kintoneで何を管理したいかを入力するだけで、kintoneアプリの設計図となる「レシピ」をAIが提案してくれるツールです。</p>
+            </CreativeCard>
+            <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" eyecatch="">
+                <p>kintoneで何を管理したいかを入力するだけで、kintoneアプリの設計図となる「レシピ」をAIが提案してくれるツールです。</p>
+            </CreativeCard>
+            <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" eyecatch="">
+                <p>kintoneで何を管理したいかを入力するだけで、kintoneアプリの設計図となる「レシピ」をAIが提案してくれるツールです。</p>
+            </CreativeCard>
+        </div>
     </ToppageSection><!-- /creative -->
 
-    <ToppageSection title-ja="読んだもの書いたもの" title-en="activity">
+    <!-- <ToppageSection title-ja="読んだもの書いたもの" title-en="activity">
         <AtomsBord>
             <AtomsGetBlogArticles />
         </AtomsBord>
-    </ToppageSection>
+    </ToppageSection> -->
 
     <ToppageSection title-ja="これまでの経歴" title-en="history">
         <AtomsBord>
@@ -71,9 +75,18 @@
 }
 
 .creative {
-    .card {
+    .items {
         width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .card {
         margin: 0 auto 2rem;
+
+        &.big { width: 100%; }
+        &.small { width: 48%; }
     }
 }
 
