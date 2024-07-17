@@ -4,14 +4,30 @@
         type: string
     }
     const props: any= defineProps<Props>();
+    
+    let linkToType: 'inPage'|'outPage' = props.href.indexOf('#') === 0 ? 'inPage' : 'outPage';
 
-    const isExternalLink: boolean = props.href.indexOf('http') >= 0 ? true : false
+    const inPageScroll = (href: string) => {
+        setSmoothScroll(href);
+        const url: string = location.hash ? location.href.replace(location.hash, href) : location.href + href;
+        history.pushState(null, '', url);
+    }
+
+    const setSmoothScroll = (target: any) => {
+        const to = document.querySelector(target);
+        let excHeight = 0;
+        const top = to.getBoundingClientRect().top - excHeight + window.scrollY;
+        window.scroll({
+            top: top,
+            behavior: "smooth"
+        })
+    };
 </script>
 
 <template>
-    <a v-if="isExternalLink" :href=props.href :class=props.type><slot></slot></a>
+    <NuxtLink v-if="linkToType = 'outPage'" :to="props.href" :class="props.type"><slot /></NuxtLink>
 
-    <NuxtLink v-else :class=props.type :to=props.href><slot></slot></NuxtLink>
+    <a v-else-if="linkToType = 'inPage'" :class="props.type" @click="inPageScroll(props.href)"><slot /></a>
 </template>
 
 <style lang="scss" scoped>
@@ -32,7 +48,4 @@
         text-shadow: 0px 0px 3px $black;
     }
 }
-
-
-
 </style>
