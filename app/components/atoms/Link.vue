@@ -1,7 +1,8 @@
 <script setup lang="ts">
     interface Props {
-        href: string
-        type: string
+        href: string|URL,
+        color?: 'black'|'gray'|'light-green'|null|undefined,
+        type?: 'text'|'button'|null|undefined
     }
     const props: any= defineProps<Props>();
 
@@ -39,9 +40,18 @@
 </script>
 
 <template>
-    <a v-if="props.href.indexOf('#') === 0" :class="props.type" @click="inPageScroll(props.href)"><slot /></a>
+    <a v-if="props.href.indexOf('#') === 0" 
+        :class="[props.type ? type : 'text', props.color ? color : 'black']"
+        @click="inPageScroll(props.href)">
+            <slot />
+    </a>
 
-    <NuxtLink v-else :to="props.href" :class="props.type" @click="console.log(props.href.indexOf('#'))"><slot /></NuxtLink>
+    <NuxtLink v-else 
+        :to="props.href" 
+        :class="[props.type ? type : 'text', props.color ? color : 'black']"
+        @click="console.log(props.href.indexOf('#'))">
+            <slot />
+    </NuxtLink>
 </template>
 
 <style lang="scss" scoped>
@@ -50,7 +60,6 @@
 
     &:hover {
         color: $orange;
-        // text-shadow: 0px 0px 3px $black;
     }
 }
 
@@ -62,4 +71,45 @@
         text-shadow: 0px 0px 3px $black;
     }
 }
+
+.light-green {
+    color: $light-green;
+
+    &:hover {
+        color: $orange;
+        text-shadow: 0px 0px 3px $black;
+    }
+
+    &.button {
+        color: $white;
+        background-color: $light-green;
+        border: solid 1px $light-green;
+        box-shadow: 0px 0px 2px $deep-green;
+        transition: color 0.3s 0s, background-color 0.3s 0s;
+
+        &:hover {
+            color: $light-green;
+            font-weight: bold;
+            background-color: $white;
+            text-shadow: none;
+        }
+    }
+}
+
+.button {
+    display: block;
+    padding: 1em;
+    text-align: center;
+    text-indent: -0.5em;
+    position: relative;
+    border-radius: 10px;
+
+    &::before {
+        content: '〉';
+        position: absolute;
+        right: 1.5em; top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
 </style>

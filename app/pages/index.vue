@@ -26,11 +26,11 @@
         </div>
     </ToppageSection><!-- /creative -->
 
-    <!-- <ToppageSection title-ja="読んだもの書いたもの" title-en="activity">
-        <AtomsBord>
-            <AtomsGetBlogArticles />
-        </AtomsBord>
-    </ToppageSection> -->
+    <ToppageSection title-ja="読んだもの書いたもの" title-en="activity">
+        <AtomsLink href="https://blog.udcxx.me/" type="button" color="light-green">📚 ブログ</AtomsLink>
+        <AtomsLink href="https://udcxx.hateblo.jp/" type="button" color="light-green">📅 週報</AtomsLink>
+        <AtomsLink href="https://note.com/udcxx" type="button" color="light-green">📝 note</AtomsLink>
+    </ToppageSection>
 
     <ToppageSection title-ja="これまでの経歴" title-en="history">
         <HistoryCard year="2021.09" title="テクサポ＠ITサポート企業" :tags="['kintone', 'API', 'JavaScript', 'IT全般']">
@@ -97,6 +97,12 @@
     .bord {
         width: 95%; max-width: 600px; 
         margin: 0 auto;
+    }
+
+    .button {
+        width: 50%; max-width: 300px;
+        margin: 0 auto 2rem;
+        @include fontsize(20);
     }
 }
 

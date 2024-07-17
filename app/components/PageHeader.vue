@@ -7,9 +7,10 @@
         <div class="header_bar" :class="direction">
             <h1>udcxx.</h1>
             <ul>
-                <li><AtomsTextLink href="#about" type="black">about</AtomsTextLink></li>
-                <li><AtomsTextLink href="#creative" type="black">creative</AtomsTextLink></li>
-                <li><AtomsTextLink href="#history" type="black">history</AtomsTextLink></li>
+                <li><AtomsLink href="#about" color="black">about</AtomsLink></li>
+                <li><AtomsLink href="#creative" color="black">creative</AtomsLink></li>
+                <li><AtomsLink href="#activity" color="black">activity</AtomsLink></li>
+                <li><AtomsLink href="#history" color="black">history</AtomsLink></li>
             </ul>
         </div><!-- /header_bar -->
     </div><!-- /header -->
