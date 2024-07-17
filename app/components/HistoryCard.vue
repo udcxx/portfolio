@@ -48,7 +48,7 @@
 
         .tag {
             @include fontsize(12);
-            margin: 0 1rem;
+            margin: 0 0.5rem;
             padding: 0 0.5em;
             display: inline-block;
             line-height: 2em;
@@ -56,7 +56,7 @@
             border-radius: 10px;
 
             &:nth-last-of-type(1) {
-                margin: 0 0 0 1rem;
+                margin: 0 0 0 0.5rem;
             }
         }
     }
