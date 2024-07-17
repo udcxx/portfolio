@@ -36,10 +36,15 @@
         <HistoryCard year="2021.09" title="テクサポ＠ITサポート企業" :tags="['kintone', 'API', 'JavaScript', 'IT全般']">
             <p>クラウド製品のテクニカルサポート（電話/メール）を担当し、基本機能のサポートに加えて、APIに関するサポートも兼任。<br>業務効率化のため、ブックマークレットやkintoneカスタマイズの作成も行う。</p>
         </HistoryCard>
-        <HistoryCard year="2021.09" title="テクサポ＠ITサポート企業" :tags="['kintone', 'API', 'JavaScript', 'IT全般']">
-            <p>クラウド製品のテクニカルサポート（電話/メール）を担当し、基本機能のサポートに加えて、APIに関するサポートも兼任。<br>業務効率化のため、ブックマークレットやkintoneカスタマイズの作成も行う。</p>
+        <HistoryCard year="2019.03" title="コーダー＠LP制作会社" :tags="['HTML', 'CSS', 'JavaScript', 'PHP', 'Web', 'Git']">
+            <p>大手広告代理店グループの制作会社で、新規・更新あわせて 60件/月以上ものLPのコーディングを対応。<br>Node.jsやPHPなどを用いた業務効率化も行う。</p>
         </HistoryCard>
-        <HistoryCard year="2021.09" title="テクサポ＠ITサポート企業" :tags="['kintone', 'API', 'JavaScript', 'IT全般']"></HistoryCard>
+        <HistoryCard year="2018.04" title="社内情シス＠スタートアップ企業" :tags="['GAS', 'IT全般']">
+            <p>タイへの進出を支援する会社で、社内情シス兼バックオフィス業務を主に担当。<br>半年ほどタイに在住。現地視察のための調査補助なども行う。</p>
+        </HistoryCard>
+        <HistoryCard year="2014.04" title="大学＠情報系学部" :tags="['大学']"></HistoryCard>
+        <HistoryCard year="2011.08" title="FC2でブログを開設" :tags="['FC2', 'ブログ', 'HTML']"></HistoryCard>
+        <HistoryCard year="1996.01" title="沖縄に生まれる" :tags="['誕生']"></HistoryCard>
     </ToppageSection><!-- /history -->
 </template>
 
