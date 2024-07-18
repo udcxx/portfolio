@@ -2,7 +2,8 @@
     interface Props {
         href: string|URL,
         color?: 'black'|'gray'|'light-green'|null|undefined,
-        type?: 'text'|'button'|null|undefined
+        type?: 'text'|'button'|null|undefined,
+        blank?: boolean
     }
     const props: any= defineProps<Props>();
 
@@ -49,6 +50,7 @@
     <NuxtLink v-else 
         :to="props.href" 
         :class="[props.type ? type : 'text', props.color ? color : 'black']"
+        :target="props.blank ? '_blank' : '_self'"
         @click="console.log(props.href.indexOf('#'))">
             <slot />
     </NuxtLink>

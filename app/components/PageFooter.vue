@@ -11,7 +11,7 @@
         <ul>
             <li><AtomsLink href="https://app.udcxx.me/" color="gray">ツール・API</AtomsLink></li>
             <li><AtomsLink href="https://blog.udcxx.me/" color="gray">ブログ</AtomsLink></li>
-            <li><AtomsLink href="https://udcxx.me/contact/" color="gray">お問い合わせ</AtomsLink></li>
+            <li><AtomsLink href="https://udcxx.me/contact/" color="gray" :blank="true">お問い合わせ</AtomsLink></li>
         </ul>
     </footer>
 </template>
@@ -27,6 +27,21 @@ footer {
     color: $gray;
     position: relative;
     bottom: 0;
+    
+    @media (max-width: $break) {
+        flex-wrap: wrap;
+    }
+}
+
+.copyright {
+    font-size: 12px;
+    text-align: left;
+
+    @media (max-width: $break) {
+        width: 100%;
+        margin-bottom: 2em;
+        text-align: center;
+    }
 }
 
 ul {
@@ -35,11 +50,16 @@ ul {
     display: flex;
     justify-content: flex-end;
 
+    @media (max-width: $break) {
+        margin: 0 auto;
+        justify-content: center;
+    }
+
     li {
-        @include fontsize(14);
         display: block;
         position: relative;
         text-align: center;
+        font-size: 12px;
         flex-shrink: 0;
 
         &::after {

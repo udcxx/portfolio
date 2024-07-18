@@ -44,8 +44,8 @@
 }
 
 h1 {
-    @include fontsize(30);
     font-weight: 500; font-family: 'Ubuntu';
+    @include fontsize(30);
 }
 
 ul {
@@ -55,11 +55,11 @@ ul {
     justify-content: flex-end;
 
     li {
-        @include fontsize(14);
         display: block;
         position: relative;
         text-align: center;
         flex-shrink: 0;
+        font-size: 14px;
 
         &::after {
             content: '｜';

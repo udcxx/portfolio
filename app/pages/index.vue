@@ -24,6 +24,9 @@
                 <p>kintoneで何を管理したいかを入力するだけで、kintoneアプリの設計図となる「レシピ」をAIが提案してくれるツールです。</p>
             </CreativeCard>
         </div>
+        <p class="more">ほかにも、様々なツール・API・Webサイトの制作に<br class="forsp">携わらせていただきました。<br>そのほかの制作実績は、以下にまとめています。</p>
+        <AtomsLink href="https://app.udcxx.me/" type="button" color="light-green">公開中のツール</AtomsLink>
+        <AtomsLink href="https://app.udcxx.me/" type="button" color="light-green">Web制作実績</AtomsLink>
     </ToppageSection><!-- /creative -->
 
     <ToppageSection title-ja="読んだもの書いたもの" title-en="activity">
@@ -36,7 +39,7 @@
         <HistoryCard year="2021.09" title="テクサポ＠ITサポート企業" :tags="['kintone', 'API', 'JavaScript', 'IT全般']">
             <p>クラウド製品のテクニカルサポート（電話/メール）を担当し、基本機能のサポートに加えて、APIに関するサポートも兼任。<br>業務効率化のため、ブックマークレットやkintoneカスタマイズの作成も行う。</p>
         </HistoryCard>
-        <HistoryCard year="2019.03" title="コーダー＠LP制作会社" :tags="['HTML', 'CSS', 'JavaScript', 'PHP', 'Web', 'Git']">
+        <HistoryCard year="2019.03" title="コーダー＠LP制作会社" :tags="['HTML/CSS', 'JavaScript', 'PHP', 'Web', 'Git']">
             <p>大手広告代理店グループの制作会社で、新規・更新あわせて 60件/月以上ものLPのコーディングを対応。<br>Node.jsやPHPなどを用いた業務効率化も行う。</p>
         </HistoryCard>
         <HistoryCard year="2018.04" title="社内情シス＠スタートアップ企業" :tags="['GAS', 'IT全般']">
@@ -95,6 +98,18 @@
                 width: 100%;
             }
         }
+    }
+    .more {
+        margin: 2rem auto;
+        font-size: 14px;
+        line-height: 1.8em;
+        color: $white;
+        text-align: center;
+    }
+    .button {
+        width: 50%; max-width: 300px;
+        margin: 0 auto 2rem;
+        @include fontsize(20);
     }
 }
 

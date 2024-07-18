@@ -79,19 +79,17 @@
     }
 }
 .title {
-    @include fontsize(32);
     display: inline-block;
     padding: 1rem 1.5rem;
     font-weight: bold;
     color: $deep-green;
-    text-shadow: 1px 1px 0px $deep-green, 1px -1px 0px $deep-green, -1px 1px 0px $deep-green, -1px -1px 0px $deep-green;
     line-height: 1em;
     position: absolute;
     background: linear-gradient(15deg, rgb(249, 248, 113), rgb(26, 117, 95));
     box-sizing: border-box;
+    @include fontsize(32);
 }
 .subtitle {
-    @include fontsize(18);
     display: inline-block;
     padding: 1rem 1.5rem;
     color: $deep-green;
@@ -99,11 +97,12 @@
     position: absolute;
     background: linear-gradient(15deg, rgb(249, 248, 113), rgb(26, 117, 95));
     box-sizing: border-box;
+    @include fontsize(18);
 }
 .discription {
-    @include fontsize(14, 16);
     padding: 1rem;
     line-height: 2em;
+    font-size: 14px;
     color: $white;
     position: absolute;
     box-sizing: border-box;

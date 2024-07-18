@@ -47,10 +47,10 @@
         top: 1rem; right: 1rem;
 
         .tag {
-            @include fontsize(12);
             margin: 0 0.5rem;
             padding: 0 0.5em;
             display: inline-block;
+            font-size: 12px;
             line-height: 2em;
             background-color: $light-green;
             border-radius: 10px;
