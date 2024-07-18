@@ -10,7 +10,7 @@
 
         const button = document.querySelector('.toggle_menu');
         const navi: any= document.querySelector('.navi');
-        const naviLists = document.querySelectorAll('.navi li');
+        const naviLists = document.querySelectorAll('.navi li a');
 
         const nonActive = () => {
             button?.classList.remove('active');
@@ -96,6 +96,7 @@ ul {
     justify-content: flex-end;
 
     li {
+        height: 50px;
         display: block;
         position: relative;
         text-align: center;
@@ -105,14 +106,18 @@ ul {
         &::after {
             content: '｜';
             position: absolute;
-            right: -0.5em;
+            top: 50%; right: -0.5em;
+            transform: translateY(-50%)
         }
         &:nth-last-of-type(1)::after {
             content: none;
         }
 
         a {
-            display: inline-block;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 0 2em;
         }
     }
@@ -141,12 +146,19 @@ ul {
             &::after {
                 content: '━';
                 margin: 0 auto;
+                display: block;
                 color: $orange;
                 position: absolute;
-                bottom: -2.5em; left: 0; right: 0;
+                bottom: 0; left: 0; right: 0;
             }
             &:nth-last-of-type(1)::after {
                 content: none;
+            }
+
+            a {
+                padding: 0;
+                display: block;
+                line-height: 50px;
             }
         }
     }

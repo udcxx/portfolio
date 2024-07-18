@@ -26,7 +26,7 @@
         </div>
         <p class="more">ほかにも、様々なツール・API・Webサイトの制作に<br class="forsp">携わらせていただきました。<br>そのほかの制作実績は、以下にまとめています。</p>
         <AtomsLink href="https://app.udcxx.me/" type="button" color="light-green" class="viewtoggle slide">公開中のツール</AtomsLink>
-        <AtomsLink href="https://app.udcxx.me/" type="button" color="light-green" class="viewtoggle slide">Web制作実績</AtomsLink>
+        <AtomsLink href="https://app.udcxx.me/creative-archives/" type="button" color="light-green" class="viewtoggle slide">Web制作実績</AtomsLink>
     </ToppageSection><!-- /creative -->
 
     <ToppageSection title-ja="読んだもの書いたもの" title-en="activity">
