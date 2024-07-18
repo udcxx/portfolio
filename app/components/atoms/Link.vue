@@ -57,6 +57,10 @@
 </template>
 
 <style lang="scss" scoped>
+a {
+    cursor: pointer;
+}
+
 .black {
     color: $black;
 

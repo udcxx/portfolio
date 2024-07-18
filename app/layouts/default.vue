@@ -18,8 +18,11 @@
 
         // ヘッダー用の scroll イベント
         document.addEventListener('scroll', () => {
+            if ( document.querySelector('.toggle_menu').classList.contains('active') ) {
+                window.scroll({ top: currentY });
+            }
             let scrolledY = window.scrollY;
-            direction.value = currentY <= scrolledY ? 'down' : 'up';
+            direction.value = currentY < scrolledY ? 'down' : 'up';
             currentY = scrolledY;
         });
     });
