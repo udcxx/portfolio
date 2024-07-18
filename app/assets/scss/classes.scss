@@ -85,3 +85,26 @@ br {
         }
     }
 }
+
+
+// 
+// スライドインアニメーション
+// 
+.viewtoggle.slide {
+    opacity: 0;
+
+    &.inview {
+        animation: slidein 0.5s forwards;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

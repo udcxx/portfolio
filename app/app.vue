@@ -5,6 +5,27 @@ onMounted(() => {
     document.fonts.ready.then(() => {
         document.getElementById('loading').style.display = 'none';
     });
+
+    const objects = document.querySelectorAll('.viewtoggle');
+    const cb = (entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('inview');
+                observer.unobserve(entry.target); //監視の終了
+            }
+        });
+    };
+
+    const options = {
+        root: null,
+        rootMargin: "0% 0% -20%",
+        threshold: 0
+    }
+    
+    const io = new IntersectionObserver(cb, options);
+    objects.forEach((object) => {
+        io.observe(object);
+    });
 });
 </script>
 
