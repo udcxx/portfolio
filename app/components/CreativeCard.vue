@@ -87,7 +87,7 @@
     position: absolute;
     background: linear-gradient(15deg, rgb(249, 248, 113), rgb(26, 117, 95));
     box-sizing: border-box;
-    @include fontsize(32);
+    @include fontsize(28);
 }
 .subtitle {
     display: inline-block;

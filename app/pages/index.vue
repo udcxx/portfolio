@@ -14,14 +14,14 @@
 
     <ToppageSection title-ja="制作実績" titleEn="creative">
         <div class="items">
-            <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" subtitle="AIでkintone活用をサポート！" eyecatch="./creative/recitone.png" :isBig="true" class="viewtoggle slide">
+            <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" subtitle="AIでkintone活用をサポート！" eyecatch="./creative/recitone.jpg" :isBig="true" class="viewtoggle slide">
                 <p>AIを使ったWebツール「RECITONE」を開発しました。<br>RECITONEは、kintoneで何を管理したいかを入力するだけで、kintoneアプリの設計図となる「レシピ」をAIが提案してくれるツールです。</p>
             </CreativeCard>
-            <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" eyecatch="" class="viewtoggle slide">
-                <p>kintoneで何を管理したいかを入力するだけで、kintoneアプリの設計図となる「レシピ」をAIが提案してくれるツールです。</p>
+            <CreativeCard href="https://support-juku-sho.com/" title="個別サポート塾「翔」" eyecatch="./creative/support-sho.jpg" class="viewtoggle slide">
+                <p>沖縄県那覇市にある個別サポート塾「翔」（サポショウ）様の公式サイトを制作しました。</p>
             </CreativeCard>
-            <CreativeCard href="https://app.udcxx.me/recitone/" title="RECITONE" eyecatch="" class="viewtoggle slide">
-                <p>kintoneで何を管理したいかを入力するだけで、kintoneアプリの設計図となる「レシピ」をAIが提案してくれるツールです。</p>
+            <CreativeCard href="https://aigo.tokyo/" title="日本視覚障害者囲碁協会" eyecatch="./creative/aigo.jpg" class="viewtoggle slide">
+                <p>囲碁を通じて豊かな人生を歩むためのサポートを行う、日本視覚障害者囲碁協会様の公式サイトを制作しました。</p>
             </CreativeCard>
         </div>
         <p class="more">ほかにも、様々なツール・API・Webサイトの制作に<br class="forsp">携わらせていただきました。<br>そのほかの制作実績は、以下にまとめています。</p>
