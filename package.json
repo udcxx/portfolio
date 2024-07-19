@@ -1,38 +1,20 @@
 {
-  "name": "udcxx-portfolio",
-  "version": "23.0.0",
-  "description": "My Portfolio Site",
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "sass": "sass --no-source-map --style=compressed src/assets/scss:dist/assets/css",
-    "watch:sass": "onchange \"src/**/*.scss\" -e \"src/**/style.scss\" -- node ./scripts/watch-sass.js",
-    "server": "browser-sync start --server dist --files='./dist/*'",
-    "watch:server": "browser-sync start --server dist --files='./dist/*'",
-    "cpx-img": "cpx \"src/**/*.{jpg,jpeg,png,gif,svg}\" \"dist/\"",
-    "watch:cpx-img": "onchange \"src/**/*.{jpg,jpeg,png,gif,svg}\" -- npm run cpx-img",
-    "cpx-html": "cpx \"src/**/*.html\" \"dist/\"",
-    "watch:cpx-html": "onchange \"src/**/*.html\" -- npm run cpx-html",
-    "cpx-js": "cpx \"src/**/*.js\" \"dist/\"",
-    "watch:cpx-js": "onchange \"src/**/*.js\" -- npm run cpx-js",
-    "dev": "run-s cpx-img cpx-html cpx-js sass all-run-watch",
-    "all-run-watch": "run-p watch:*",
-    "deploy": "node ./scripts/ftp-upload.js"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/udcxx/portfolio.git"
+  "dependencies": {
+    "vue": "^3.4.29",
+    "vue-router": "^4.3.3"
   },
-  "author": "udcxx",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/udcxx/portfolio/issues"
-  },
-  "homepage": "https://github.com/udcxx/portfolio#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "cpx2": "^5.0.0",
-    "npm-run-all": "^4.1.5",
-    "onchange": "^7.1.0",
-    "sass": "^1.58.0",
-    "watch": "^0.13.0"
+    "nuxt": "^3.12.3",
+    "sass": "^1.77.6"
   }
 }

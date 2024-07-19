@@ -1,0 +1,83 @@
+@use "sass:list";
+@use "sass:math";
+
+//
+// ブレイクポイント
+//
+//   * break...SP表示を適用する最大の画面幅
+
+$break-point-value: "768";
+$break: #{$break-point-value}px;
+
+
+
+//
+// 横幅
+//
+//   * wrap-max...最大の横幅（ヘッダー内の要素など）
+//   * wrap...通常の横幅
+//   * inner...コンテンツの横幅
+
+$wrap-max: 1440px;
+$wrap: 1024px;
+$inner: 1000px;
+
+
+
+//
+// カラー
+//
+$bg-main-color: #061E22;
+
+$light-orange: #f1a957;
+$orange: #f49d37;
+$white: #f7f7f7;
+$black: #333;
+$gray: #c0c0c0;
+$light-gray: #d1d5d5;
+$deep-green: #061E22;
+$light-green: #5cca5c;
+
+
+
+//
+// フォント 
+//
+//   * font-sans-serif...ゴシック体
+//   * font-serif...明朝体
+
+$font-sans-serif: 'BIZ UDPGothic', 'Noto Color Emoji', sans-serif;
+$font-logo: 'Ubuntu';
+$font-serif: 'sans';
+
+
+
+//
+// フォントサイズ
+//
+@mixin fontsize($size...) {
+
+    $sizePC: nth($size, 1);
+    $sizeTB: nth($size, 1);
+    $sizeSP: nth($size, 1);
+
+    @if (length($size) == 2) {
+        $sizePC: nth($size, 1);
+        $sizeTB: nth($size, 1);
+        $sizeSP: nth($size, 2);
+    }  @else if (length($size) == 3) {
+        $sizePC: nth($size, 1);
+        $sizeTB: nth($size, 2);
+        $sizeSP: nth($size, 3);
+     }
+
+    font-size: #{$sizePC}px;
+
+    @media (max-width: $wrap) {
+        font-size: min(#{$sizeTB}px, calc(#{$sizeTB}px - #{list.slash($wrap, 100)} + 1vw));
+    }
+
+    @media (max-width: $break) {
+        font-size: min(#{$sizeSP}px, calc(#{$sizeSP}px - #{list.slash($break-point-value, 100)} + 1.2vw));
+    }
+}
