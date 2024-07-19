@@ -1,56 +1,33 @@
-# portfolio
+# udcxx portfolio site
 
 ポートフォリオサイト https://udcxx.me/ を管理するためのリポジトリです。
 
-## 過去のポートフォリオ
+## Tech Stack
 
-過去のポートフォリオは以下のURLで公開しています。
+本ポートフォリオサイトでは、以下の技術を使用しています。
+
+**Framework**
+
+[![](https://img.shields.io/badge/-Nuxt.js-gray.svg?logo=nuxt.js&style=plastic)](https://nuxt.com/)
+
+**Language**
+
+[![](https://img.shields.io/badge/-Sass-gray.svg?logo=sass&style=plastic)](https://sass-lang.com/) [![](https://img.shields.io/badge/-TypeScript-gray.svg?logo=typescript&style=plastic)](https://www.typescriptlang.org/) [![](https://img.shields.io/badge/-HTML5-gray.svg?logo=html5&style=plastic)](https://developer.mozilla.org/ja/docs/Web/HTML)
+
+
+## Archives
+
+過去のポートフォリオのアーカイブは、以下のURLで閲覧できます。
 
 * **2018年版：** https://udcxx.github.io/portfolio/old/2018/
 * **2019年版：** https://udcxx.github.io/portfolio/old/2019/
 * **2020年版：** https://udcxx.github.io/portfolio/old/2020/
 * **2021年版：** https://udcxx.github.io/portfolio/old/2021/
 * **2022年版：** https://udcxx.github.io/portfolio/old/2022/
+* **2023年版：** https://udcxx.github.io/portfolio/old/2023/
+* **2024年版：** https://udcxx.github.io/portfolio/old/2024/
 
-## development
 
-作業を開始するには下の手順に従います。
+## Contact
 
-### Cloneする
-
-```
-git clone https://github.com/udcxx/portfolio.git
-```
-
-### 必要なnpmパッケージをインストールする
-
-```
-cd portfolio
-npm install
-```
-
-### 作業環境を立ち上げる
-
-```
-npm run dev
-```
-
-上記コマンドで下記の機能が作動します。
-
-* scssのコンパイラ
-* 画像圧縮
-* 表示確認用のブラウザ
-
-### ソースコードを編集する
-
-`src` ディレクトリ配下のソースコードを編集します
-
-### commitする
-
-関連するissueがあればその番号をコミットメッセージに含めて、commitします。
-
-### pushする
-
-リモートへpushします。
-
-git pushコマンドを使用すると、同時にテストサーバーへのデプロイも行います。
+udcxxへのお問合せは、<a href="https://udcxx.me/contact/" target="_blank">コンタクトフォーム</a>からお願いいたします。

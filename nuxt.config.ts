@@ -6,6 +6,7 @@ export default defineNuxtConfig({
 
 	app: {
 		// baseURL: '/portfolio/', // Dev環境用
+		// baseURL: '/portfolio/old/2024/', // Github Archive用
 		head: {
 			title: 'udcxx Portfolio',
 			meta: [
