@@ -6,8 +6,8 @@
     <ToppageSection title-ja="udcxxについて" title-en="about" class="viewtoggle slide">
         <AtomsBord>
             <p>こんにちは👋 だいちゃん / udcxx です。<br>ポートフォリオをご覧いただきありがとうございます🙌</p>
-            <p>小さい頃からパソコンが好きで、Web系の会社などを経て、現在はテクニカルサポートとして、ユーザー様の困りごとをいち早く解決できるように全力を注いでます💪</p>
-            <p>Webへの興味も捨てられず、勉強がてら、このポートフォリオサイトもほぼ毎年作り変えています🎨<br>ほかにも、kintoneのカスタマイズやブックマークレットなど、業務をちょっと改善するコードを書いたり、Webツールを作って公開したりと、公私ともにインプット・アウトプットを繰り返して日々成長中！</p>
+            <p>小さい頃からパソコンが好きで、Web系の会社などを経て、現在はヘルプデスクとして、ユーザーの困りごとをいち早く解決できるように全力を注いでます💪</p>
+            <p>Webへの興味も捨てられず、勉強がてら、このポートフォリオサイトもほぼ毎年作り変えています🎨<br>ほかにも、kintoneのカスタマイズやブックマークレット、バッチファイルなど、業務をちょっと改善するコードを書いたり、Webツールを作って公開したりと、公私ともにインプット・アウトプットを繰り返して日々成長中！</p>
             <p>Web, JavaScript, kintone... に関することなら一度お声掛けください📣 なにかお役に立てるかもしれません。</p>
         </AtomsBord>
     </ToppageSection><!-- /about -->
@@ -31,13 +31,14 @@
 
     <ToppageSection title-ja="読んだもの書いたもの" title-en="activity">
         <AtomsLink href="https://blog.udcxx.me/" type="button" color="light-green" class="viewtoggle slide">📚 ブログ</AtomsLink>
-        <AtomsLink href="https://udcxx.hateblo.jp/" type="button" color="light-green" class="viewtoggle slide">📅 週報</AtomsLink>
-        <AtomsLink href="https://note.com/udcxx" type="button" color="light-green" class="viewtoggle slide">📝 note</AtomsLink>
     </ToppageSection>
 
     <ToppageSection title-ja="これまでの経歴" title-en="history">
-        <HistoryCard year="2021.09" title="テクサポ＠ITサポート企業" :tags="['kintone', 'API', 'JavaScript', 'IT全般']" class="viewtoggle slide">
-            <p>クラウド製品のテクニカルサポート（電話/メール）を担当し、基本機能のサポートに加えて、APIに関するサポートも兼任。<br>業務効率化のため、ブックマークレットやkintoneカスタマイズの作成も行う。</p>
+        <HistoryCard year="2024.11" title="ヘルプデスク＠CG制作会社" :tags="['Windows', 'Linux', 'DCCツール', 'Deadline', 'IT全般']" class="viewtoggle slide">
+            <p>フルリモートで、100台超のWindows/Linuxマシンの管理、DCCツールのインストール、ライセンス管理などを担当。<br>業務効率化のためのバッチファイルの作成なども行う。</p>
+        </HistoryCard>
+        <HistoryCard year="2021.09" title="テクニカルサポート＠ITO企業" :tags="['kintone', 'API', 'JavaScript', 'IT全般']" class="viewtoggle slide">
+            <p>kintoneのテクニカルサポートを担当。基本機能のサポートに加えて、APIに関するサポートも兼任。<br>業務効率化のため、ブックマークレットやkintoneカスタマイズの作成も行う。</p>
         </HistoryCard>
         <HistoryCard year="2019.03" title="コーダー＠LP制作会社" :tags="['HTML/CSS', 'JavaScript', 'PHP', 'Web', 'Git']" class="viewtoggle slide">
             <p>大手広告代理店グループの制作会社で、新規・更新あわせて 60件/月以上ものLPのコーディングを対応。<br>Node.jsやPHPなどを用いた業務効率化も行う。</p>
